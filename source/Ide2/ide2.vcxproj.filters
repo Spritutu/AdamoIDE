@@ -1,0 +1,2876 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9ecd501e-a477-4686-891e-efcbf03e6bea}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{3f5964cd-fc0d-4720-9a00-154e0334a429}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6a3d9e0a-a75f-4a46-bc55-18fe377c6812}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AdamoAboutBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoAnalogIn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoAnalogOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoAxis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoBaseList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoCC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoCCFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cnc\AdamoCfgMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoConfHWView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoConfigHWView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoCopyPlant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoCounter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoCPDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDbgIOView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDbgObjectView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDbgVarView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGCards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGComm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGDocument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGEthercat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGFilters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGHardware.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGSoftware.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGSSCNET.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGSSCNETView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoDgtIn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoDgtOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDGView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoDlgShowModules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoEthercatAssi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoEthercatGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoEthercatIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoEthercatIOAnalogico.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoEthercatNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoFileDati.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoFindInFiles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoFindInFilesView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoGeneric.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoHelpOptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoinstallLibraries.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoListErrors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cnc\AdamoMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDAxButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDAxesView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDAxSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDAxStatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDCommandBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDIOView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDIOViewDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDSplittedView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDSplitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoMDView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoOptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoPlant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoReferenceView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRenameMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSActiveXPreview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSCatalogue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSColumns.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramAx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramCheckBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramCombo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramGroupBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramIAngularGauge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramILabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramILinearGauge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramISevenSegment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramLed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramObjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramPicture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDiagramRadioButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSEditGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSEditIndexSupergrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSEditTableIndex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSObjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSOptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSValues.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoRSView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSEDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSEFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSelectDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSEListView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSettingsFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSEView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoShowGlobalsSupergrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoShowMatrixSupergrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSink.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSplash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSSCNETGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoStatusBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynBaseCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynCheckBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynGroupBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynIAngularGauge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynIDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynILabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynILed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynILinearGauge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynIPicture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynListBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynRadioButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynRTAx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoSynRTAxData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoTables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoTablesSupergrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase\AdamoTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoTraduzione.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdamoVersion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Cnc\AdamoVMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AdamoLink\MSGSERV\AdaPsw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ado2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AllAxesView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Breakpoints.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BtnST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CallStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CanOpenAnalogIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CanOpenAxes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CanOpenData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CanOpenDigitalIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CBrowserContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CFunctionsContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CharCheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CiLabelX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CiLedDiamondX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CiLedRectangleX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CiLedRoundX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CiLinearGaugeX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CiSevenSegmentAnalogX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjectsContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorStaticST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColumnTreeCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColumnTreeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfFind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigHWGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigModuleGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfTreeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateSlot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSyntaxContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Curvefit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CVariableContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debugger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceVariable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DGEcMailBoxView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DGSdoView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagramClipboardHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagramEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagramEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagramEntityContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagramLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagramMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagramPropertyDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogSlot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Digistatic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAdapters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgConnectToTcp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEcConfigSingleSlave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEcConfigSlaves.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEcMailBoxRead.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEcMailBoxWrite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEditLuaLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFindErrors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgGetPath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHWCanOpenNet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHWCanOpenNodes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHWEthercatNet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHWModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHWSSCNETNet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHWSSCNETStation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHWYoupsilon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgIDRange.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgImportImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgKC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgLuaLibraries.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMbx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgNewLuaLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgOscilloscope.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSamples.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSdoRead.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSdoWrite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSlotView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgStrings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgTriggers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockConfigHW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockConfigTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockDbgIOView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockDbgObjectView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockDbgVarView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockDevListView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockDevProperty.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockDGSdo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockEcMailBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockHelpOnLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockHelpOnLineHtml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockLangView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockListErrors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockOscilloscope.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockRS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockThiraLuaObjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorsDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Executor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileFinder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FindDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalArr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalVariable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GruppDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpOnLineHTMLView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpOnLineView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTMLCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTMLDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTMLFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTMLFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTMLView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iangulargaugex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ide2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iknobx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iledbarx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IOSuperGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="islidingscalex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iswitchleverx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iswitchpanelx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KSFileDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LangView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="listeditctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListViewErrorsCustomColor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NewDev.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NewPlant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OleDropSourceEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OscChannelData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OscProp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OscView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaneColorSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaneView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PAREDIT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Path.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="picture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaneCCFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlantManage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="preprocessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PreviewResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Project.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectNew.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyGridItemEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PropSet.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SamplesGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScintillaBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScintillaView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SdoReadGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SdoWriteGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowGlobalMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowGlobalVars.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowModulesSuperGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SlotView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SSCNETConf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SSCNETIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SSCNETParameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SSCNetParGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdGrfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="supergridctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TabBitmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThiraLuaObjectsView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tokenizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TransparentStatic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeViewFiles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TriggerGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UndoItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserStrings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VariablesBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VarListView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WatchBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WatchListView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Workspace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkspaceWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xSkinButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSelSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdamoSynRTAxData.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Cfg\AdamoVar.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorsDlg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoAboutBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoCC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\adamoconfhwview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\adamoconfighwview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoConversioneFormato.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoCopyPlant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoCPDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoDbgIOView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoDbgVarCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoDbgVarView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoDGComm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoDGDocument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoDGEthercat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoDGFilters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoDGFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoDGHardware.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoDGModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoDGSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoDGView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoDlgShowModules.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoEthercatAssi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\AdamoEthercatGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoEthercatGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoEthercatIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoEthercatIOAnalogico.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoEthercatNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoFileDati.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoFindInFiles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoFindInFilesView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoIdeEthercat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Cnc\AdamoMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoMDAxButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoMDAxesView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoMDAxSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoMDDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoMDIOView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoMDIOViewDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoMDSplittedView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoMDSplitter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\adamomdsscnet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoMDView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoRenameMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoRS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoRSColumns.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoRSDiagramObjects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoRSEditGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoRSEditIndexSupergrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\adamorsedittableindex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoRSObjects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoRSOptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\adamorstemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoRSValues.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoSelectDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoShowMatrixSupergrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoSink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSplash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\adamosscnetgrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoSw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynBaseCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynCheckBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynComboBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynIAngularGauge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynIDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynILabel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynILed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynILinearGauge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoSynImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoSynIPicture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynLabel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynListBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdamoSynRTAx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\adamotables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoTablesSupergrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBase\AdamoTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdamoTraduzione.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\AdamoVersion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdvancedStatusBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\AdvancedStatusBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AllAxesView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\BitmapSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\breakpoints.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\BtnST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CallStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\CallStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\canopenanalogio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\canopendata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\canopendigitalio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\CBrowserContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\CharCheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\CiLabelX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\CiLedRectangleX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CiLinearGaugeX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\CiSevenSegmentAnalogX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ColorStaticST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\conffind.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\configdoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ConfigFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ConfigHWGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ConfTreeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateSlot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\CVariableContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\Data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\Debugger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debugger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DebuggerMessages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DeviceDefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DeviceGridView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceListView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceVariable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DGEcMailBoxView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DGSdoView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogSlot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DialogSlot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEcConfigSingleSlave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEcConfigSlaves.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEcMailBoxRead.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEcMailBoxWrite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFindErrors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFPGARegisters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\dlghwcanopennet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\dlghwcanopennodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgHWEthercatNet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\dlghwsscnetnet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\dlghwsscnetstation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DlgHWYoupsilon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgIDRange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\dlgimportimage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgOscilloscope.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSamples.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSdoRead.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSdoWrite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSlotView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DlgSlotView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgStrings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\dlgstrings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgTriggers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DockConfigHW.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DockConfigTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DockConfigTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DockDbgIOView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DockDbgObjectView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DockDbgVarView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DockDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DockDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DockDevListView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DockDevListView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DockDevProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DockDevProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DockDGSdo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\DockLangView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DockOscilloscope.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ErrorsComboBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorsComboBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ErrorsDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\Executor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Executor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\FindDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\FlatTabCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\GenDC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalArr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\GlobalArr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\GlobalMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\GlobalVariable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\GridCtrlDev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\GridCtrlDevCan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\GridDeviceBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\GridView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\HTMLFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ide2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ide2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\Ide2_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iledbarx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\imageresource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InplaceComboBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOSuperGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplotannotationx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplotaxisx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplotchannelx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplotdatacursorx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplotdataviewx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplotlabelx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplotlegendx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplotlimitx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplottablecolumnx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplottablex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplottoolbarx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iplotx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="islidingscalex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iswitchleverx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iswitchpanelx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\KSFileDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\LangView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\LedButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="listeditctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\LuaDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\LuaEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\LuaFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\LuaHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\LuaView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\mainframe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\NewDev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NewDev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NewPlant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\NewPlant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\OpenSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\OptionDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OscChannelData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OscProp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OscView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\OutputView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\OutputWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\PAREDIT.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\PlaneCCFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\PlantManage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\preprocessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PreviewResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\Project.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Project.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ProjectFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ProjectNew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectNew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ProjectProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\PropertyGridItemEx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ReplaceDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ResourceFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScintillaBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ScintillaBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScintillaView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\ScintillaView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\SdoReadGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\SdoWriteGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowGlobalMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowModulesSuperGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\SlotView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SSCNETConf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SSCNETIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Adamo.PrimaConfigurazioneHardwareNuova\AdamoIDE\include\Ide\sscnetparameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\SSCNetParGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TransparentCheckBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeViewFiles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\TreeViewFiles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\TypeSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UserStrings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VariablesBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\VariablesBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\VarListView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\VisValEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WatchBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\WatchBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WatchList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WatchListView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\WatchListView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\Workspace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Workspace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Ide\WorkspaceWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkspaceWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSelSymbol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Ide2.idl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ide2.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Accelerazione.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\AdaDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Alarm.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\AllErrors.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\AngularGauge.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ArrowDownP.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ArrowDownU.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ArrowMask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ArrowPageDownP.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ArrowPageDownU.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ArrowPageUpP.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ArrowPageUpU.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ArrowUpP.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ArrowUpU.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b1down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b1gray.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b1mask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b1norm.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b1norm1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b2down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b2gray.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b2mask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b2norm.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b2over.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b3down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b3gray.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b3mask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b3norm.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b3over.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b4down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b4gray.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b4mask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b4norm.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b4over.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b5down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b5gray.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b5mask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b5norm.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\b5over.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BitmapErrorsList.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BitmapErrorsList2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00001.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00002.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00003.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00004.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00005.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00006.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00007.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00008.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00009.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00010.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00011.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00012.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00013.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00014.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00015.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00016.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00017.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00018.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00019.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00020.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00021.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00022.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00023.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00024.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00025.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00026.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00027.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00028.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00029.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00030.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00031.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00032.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00033.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00034.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00035.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00036.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00037.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00038.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00039.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00040.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp00041.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp_empt.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmpDate.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BmpSfondoPagine.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BreakPoints.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButGrandeHoverStop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButGrandeHoverStop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButGrandeMask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButGrandeMask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButGrandePremutoStop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButGrandePremutoStop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButGrandeStop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButGrandeStop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButOscMask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButOscMinusD.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButOscMinusU.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButOscPlusD.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButOscPlusU.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButRadioMask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButRadioNormal.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButRadioSelected.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoHoverLoopAperto.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoHoverLoopAperto.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoHoverLoopChiuso.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoHoverLoopChiuso.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoHoverMeno.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoHoverMeno.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoHoverPiu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoHoverPiu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoLoopAperto.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoLoopAperto.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoLoopChiuso.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoLoopChiuso.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoMask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoMask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoMeno.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoMeno.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoPiu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPiu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoLoopAperto.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoPremutoLoopAperto.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoLoopChiuso.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoPremutoLoopChiuso.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoMeno.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoPremutoMeno.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButStrettoPremutoPiu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoPiu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButtonStartTaraturaMask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButtonStartTaraturaOff.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButtonStartTaraturaOn.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButtonStopTaraturaMask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButtonStopTaraturaOff.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ButtonStopTaraturaOn.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapAlarm.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapAnteprima.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapBooleanType.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapComment.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapCycErrors.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\capdgcom.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\capdialogs.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapFunction.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapGCode.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapGomma.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapHWErrors.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapImmagine.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapIntErrors.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapLine.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapMessaggi.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapMessaggiIndice.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapMessaggiIndiceStringa.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapModules.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapName.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapNumberType.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapPriority.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapSlots.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapString.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapStringType.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapTask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapTaskNew.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapTime.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CaptionAllErrors.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\captracecomm.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CapTraceHW.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ClearOsc.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ClearOscPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CommLed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\conf_tre.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Connecto.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CustomParameters.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Decelerazione.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DeviceGroup.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Disco.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Dispositivo.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eyeblue.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eyecl2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eyeclosed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eyegray.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eyegreen.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eyemask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eyered.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\filetypes.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Finestra.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\GaugeRSRosso.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\GaugeRSVerde.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\gomma.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Gomma.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\HWTabView.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\i.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00001.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00002.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon2.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon3.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon4.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon5.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ID.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ide2.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\il_file.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\il_tab.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\InputOff.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\InputOn.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\JogCloseLoop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\JogCloseLoopPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\JogMinus.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\JogMinusPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\JogOpenLoop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\JogOpenLoopPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\JogPlus.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\JogPlusPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\JogStop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\JogStopPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Label.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Led.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LedRosso.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LedRS.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LedRSRosso.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LedVerde.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LinearGauge.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LinearGaugeRSBlu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LuaDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Messages.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Minus.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Monitor.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Monitor1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TentativiDiMotta\Monitor1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Monitor2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Monitor3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Monitor4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mp_channel.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mp_channel_active.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mp_thumb.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mp_thumb_active.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OptionOsc.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OptionOscPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\options.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OscCursor.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OscCursorPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OscLoad.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OscLoadPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OscPrint.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OscPrintPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OutputOff.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\OutputOn.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\PaneProperties.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ParParametriche.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ParTestine.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ParUtensili.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Plus.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Quota.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Regime.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SampleSym.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SaveOsc.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SaveOscPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\scheda1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SelectAdapter.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SelectLibrary.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sesta322.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SettingsOsc.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SettingsOscPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SevenSegment.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\short_mp_channel.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\short_mp_channel_active.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\short_mp_thumb.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\short_mp_thumb_active.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\showglob.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\showmod.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SlideBar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\slotstat.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SpecialLedMask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SpecialLedOff.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SpecialLedOn.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SpiaLoopClose.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SpiaLoopOpen.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\StartOsc.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\StartOscPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\StartOscPT.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\StartOscPTPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\StartOscTriggered.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\StartOscTriggeredPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Stop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\StopOsc.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\StopOscPressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TabErrors.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TaskBreaked.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TaskDeath.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\taskrun.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Telecomando.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Temple 01.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\test.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TestIcon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ThyraAbout.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ThyraSplash.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TipoDispositivo.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar_.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar_view.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolbarBrowse.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarBuild.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarCanOpen.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarConf.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarConfDevices.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarConfHW.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarDebug.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarDiagnostic.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolbarEdit.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarEthercat.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarMessages.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolbarModules.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarOsc.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarPlc.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolbarResources.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolbarResourcesControls.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolbarResourcesFormat.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolbarResourcesTools.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbarSize.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarSSCNET.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ToolBarViewErrors.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TriggerSym.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\black.png" />
+    <Image Include="..\..\..\..\..\Ups\Cursor\CursorDrop.png" />
+    <Image Include="res\green.png" />
+    <Image Include="res\Orange.png" />
+    <Image Include="res\bmp00042.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAdamoSink.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cursor1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ide2.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Ide2.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource.hm">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="Debug\CncInterface.tli" />
+    <None Include="res\html_non.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Thira.exe.manifest" />
+  </ItemGroup>
+</Project>

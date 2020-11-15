@@ -1,0 +1,196 @@
+// cooLexxerContext.h: interface for the cooLexxerContext class.
+//
+//////////////////////////////////////////////////////////////////////
+
+/*********************************************************************
+Class:      cooLexxerContext
+Author:     Alexander Berthold
+Copyright:  Alexander Berthold
+Date:       19.4.2001
+Purpose:    This class manages the context of the lexxer.
+            - It maintains a list of currently active lexxer rules
+            - It stores the cookies of the active lexxer rules
+*********************************************************************/
+
+#if !defined(AFX_COOLEXXERCONTEXT_H__121468FE_E85D_42BE_8226_FDA6A3D57D52__INCLUDED_)
+#define AFX_COOLEXXERCONTEXT_H__121468FE_E85D_42BE_8226_FDA6A3D57D52__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+// Forwards
+class	cooLexxerTokenRule;
+class	cooLexxerMapData;
+
+class cooLexxerContext : 
+	public ctkFlagsMixin<oolctx_flags>,
+	public ctkCheckValid
+{
+// Construction/Destruction
+public:
+	cooLexxerContext();
+	virtual ~cooLexxerContext();
+
+// Local classes
+protected:
+	// Data class
+	class cooListEntry :
+		public ctkCheckValid
+	{
+	// Construction/Destruction
+	public:
+		cooListEntry(int _nStartPosition, cooLexxerMapData *_plmdRule)
+			{
+			fNotApplying	=false;
+			fMarkedForDeletion=false;
+			nStartPosition	=_nStartPosition;
+			nEndPosition	=-1;
+			plmdRule		=_plmdRule;
+			plmdRuleLastValid=NULL;
+			}
+
+	// Attributes
+	protected:
+		bool				fNotApplying;
+		bool				fMarkedForDeletion;
+		int					nStartPosition;
+		int					nEndPosition;
+		cooLexxerMapData	*plmdRule;
+		cooLexxerMapData	*plmdRuleLastValid;
+
+	// Operations
+	public:
+        /*** Diagnostics ***/
+#ifdef _DEBUG
+		bool				fCheckValid() const;
+#else
+		bool				fCheckValid() const
+							{ return true; };
+#endif
+
+        /*** Status query ***/
+		bool				fIsCompleted()
+							{ return (nEndPosition!=-1); };
+		bool				fIsNotApplying()
+							{ return fNotApplying; };
+		bool				fIsMarkedForDeletion()
+							{ return fMarkedForDeletion; };
+		cooLexxerMapData*	plmdGetRule()
+							{ return plmdRule; };
+		cooLexxerMapData*	plmdGetLastValidRule()
+							{ return plmdRuleLastValid; };
+		int					nGetStartPosition()
+							{ return nStartPosition; };
+		int					nGetEndPosition()
+							{ return nEndPosition; };
+
+        /*** Status manipulation ***/
+		void				vSetRule(cooLexxerMapData* _plmdRule)
+							{ plmdRule=_plmdRule; };
+		void				vMarkForDeletion()
+							{fMarkedForDeletion=true;};
+		void				vSetNotApplying()
+							{fNotApplying=true;};
+		void				vSetCompleted(int _nEndPosition, cooLexxerMapData* _plmdRuleLastValid)
+							{nEndPosition=_nEndPosition;
+							 plmdRuleLastValid=_plmdRuleLastValid;
+							 ASSERT(plmdRuleLastValid!=NULL);
+							 ASSERT(nEndPosition!=-1);};
+
+	};
+
+	// Allocator classes
+	class hlp1 : public std::allocator<cooListEntry*>
+		{};
+
+	class cooListEntry_allocator : public hlp1
+	{
+	public:
+		void destroy(pointer p)
+			{
+			delete (*p);
+			hlp1::destroy(p);
+			}
+	};
+
+	class hlp2 : public std::allocator<std::pair<DWORD,cooLexxerContextCookie*> >
+		{};
+
+	class cooLexxerContextCookie_allocator : public hlp2
+	{
+	public:
+		void destroy(pointer p)
+			{
+			delete p->second;
+			hlp2::destroy(p);
+			}
+	};
+
+// Typedefs
+public:
+	typedef	std::list<cooListEntry*,cooListEntry_allocator>
+					lc_list_type;
+	typedef std::map<DWORD,cooLexxerContextCookie*,std::less<DWORD>,cooLexxerContextCookie_allocator>
+					lc_cookiemap_type;
+	typedef lc_cookiemap_type::iterator 
+					cookiemap_iterator;
+	typedef lc_cookiemap_type::const_iterator 
+					const_cookiemap_iterator;
+	typedef lc_cookiemap_type::value_type
+					cookiemap_valuetype;
+	typedef	lc_list_type::iterator
+					rulelist_iterator;
+
+// Attributes
+protected:
+	// List of currently used rules
+	lc_list_type	m_lstTokenRules;
+	// Current text
+	std::tstring	m_strCurrentText;
+	// For informational purposes: the current line
+	int				m_nCurrentLine;
+	// The map of cookies (each 'token rule' can set one)
+	lc_cookiemap_type m_mapCookies;
+
+// Operations
+public:
+#ifdef _DEBUG
+	virtual	bool	fCheckValid() const;
+	static bool		fRunDiagnostics();
+#else
+	virtual	bool	fCheckValid() const
+					{ return true; };
+#endif
+
+	/*** Token rule list operations ***/
+	lc_list_type*
+					plstGetTokenRuleList()
+					{ return &m_lstTokenRules; };
+
+	/*** Cookie operations ***/
+	bool			fSetCookie(const cooLexxerTokenRule* pltrRule,
+							   cooLexxerContextCookie* plccCookie);
+	cooLexxerContextCookie*
+					plccGetCookie(const cooLexxerTokenRule* pltrRule) const;
+	const cooLexxerContextCookie*
+					plccGetConstCookie(const cooLexxerTokenRule* pltrRule) const
+					{ return plccGetCookie(pltrRule); };
+	cooLexxerContextCookie*
+					plccGetCookie(DWORD dwCookieID) const;
+	bool			fDeleteCookie(cooLexxerTokenRule* pltrRule);
+	bool			fDeleteCookie(DWORD dwCookieID);
+
+	/*** Data access operations ***/
+	std::tstring&	strGetCurrentText()
+					{ return m_strCurrentText; };
+	const std::tstring& strGetCurrentTextConst() const
+					{ return m_strCurrentText; };
+	int				nDeleteMarkedListEntries();
+	void			vCleanUpAfterTokenRecognition();
+
+// Friend declarations
+	friend class cooLexxer;
+};
+
+#endif // !defined(AFX_COOLEXXERCONTEXT_H__121468FE_E85D_42BE_8226_FDA6A3D57D52__INCLUDED_)

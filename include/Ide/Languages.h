@@ -1,0 +1,9 @@
+/*
+** Languages.h : 
+*/
+
+#define ADAMO_LANG_ITALIAN "ITALIAN"
+#define ADAMO_LANG_ENGLAND "ENGLAND"
+#define ADAMO_LANG_GERMAN  "GERMAN"
+#define ADAMO_LANG_FRENCH  "FRENCH"
+#define ADAMO_LANG_SPAIN   "SPAIN"

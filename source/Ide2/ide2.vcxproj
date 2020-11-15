@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{729E7280-62A7-41D1-96CB-ABC9F3B3E536}</ProjectGuid>
+    <RootNamespace>ide2</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Exact</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.30028.132</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\..\..\executable\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Codejock Software\MFC\Xtreme ToolkitPro v19.1.0\Source;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Codejock Software\MFC\Xtreme ToolkitPro v19.1.0\Lib\vc160;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\Program Files %28x86%29\Codejock Software\MFC\Xtreme ToolkitPro v19.1.0\Source;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>d:\sviluppo\adamo\adamobin\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Codejock Software\MFC\Xtreme ToolkitPro v19.1.0\Source;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Codejock Software\MFC\Xtreme ToolkitPro v19.1.0\Lib\vc160;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\Program Files %28x86%29\Codejock Software\MFC\Xtreme ToolkitPro v19.1.0\Source;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\ide;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\executable\Release/ide2.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\core;..\..\include\ide;..\..\include\lua;..\..\include\scintilla;..\..\include\cnc;..\..\..\adamocnc\include\adamo_canel;..\GridCtrl;..\..\include\lexxer;..\..\..\adamocnc\include\lib;..\..\include\cfg;..\ide2;..\..\..\adamolink\include;..\..\..\AdamoCNC\bblock\CCDK3\INCLUDE;..\..\..\AdamoCNC\bblock\CCDKM\INCLUDE;..\..\..\AdamoCNC\SOEM-1.3.1\soem;..\..\..\AdamoCNC\SOEM-1.3.1\osal;..\..\..\AdamoCNC\SOEM-1.3.1\osal\win32;..\..\..\AdamoCNC\SOEM-1.3.1\oshw\win32;..\..\..\AdamoCNC\SOEM-1.3.1\oshw\win32\wpcap\include;..\..\..\AdamoCNC\Ethercat\SOEM-1.3.1\soem;..\..\..\AdamoCNC\Ethercat\SOEM-1.3.1\osal;..\..\..\AdamoCNC\Ethercat\SOEM-1.3.1\osal\win32;..\..\..\AdamoCNC\Ethercat\SOEM-1.3.1\oshw\win32;..\..\..\AdamoCNC\Ethercat\SOEM-1.3.1\oshw\win32\wpcap\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXDLL;ADAMO_IDE;NTDDI_VERSION= 0x06030000;WINVER=0x0A00;_WIN32_WINNT=0x0A00;_CRT_SECURE_NO_WARNINGS;_USE_32BIT_TIME_T;ADAMO_SIMBA;ADAMO_ETHERCAT;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;_WINSOCK_DEPRECATED_NO_WARNINGS</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/ide2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0410</Culture>
+      <AdditionalIncludeDirectories>C:\PROGRAM FILES\CODEJOCK SOFTWARE\MFC\TOOLKITPRO\INCLUDE;..\..\include\ide;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;standard.lib;shlwapi.lib;gridctrl.lib;mpr.lib;lexxer.lib;ThiraImageLib.lib;AdamoLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\AdamoBin\Thira.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\library\release;..\..\..\AdamoCNC\bin\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\..\..\executable\Release/Thira.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\executable\Release/ide2.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\ide;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\executable\Debug/ide2.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\core;..\..\include\ide;..\..\include\lua;..\..\include\scintilla;..\..\include\cnc;..\..\..\adamocnc\include\adamo_canel;..\GridCtrl;..\..\include\lexxer;..\..\..\adamocnc\include\lib;..\..\include\cfg;..\ide2;..\..\..\adamolink\include;..\..\..\AdamoCNC\bblock\CCDK3\INCLUDE;..\..\..\AdamoCNC\bblock\CCDKM\INCLUDE;..\..\..\AdamoCNC\Ethercat\SOEM-1.3.1\soem;..\..\..\AdamoCNC\Ethercat\SOEM-1.3.1\osal;..\..\..\AdamoCNC\Ethercat\SOEM-1.3.1\osal\win32;..\..\..\AdamoCNC\Ethercat\SOEM-1.3.1\oshw\win32;..\..\..\AdamoCNC\Ethercat\SOEM-1.3.1\oshw\win32\wpcap\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;ADAMO_IDE;NTDDI_VERSION= 0x06030000;WINVER=0x0A00;_WIN32_WINNT=0x0A00;_CRT_SECURE_NO_WARNINGS;_USE_32BIT_TIME_T;ADAMO_SIMBA;ADAMO_ETHERCAT;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/ide2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <BrowseInformationFile>.\Debug/</BrowseInformationFile>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0410</Culture>
+      <AdditionalIncludeDirectories>C:\Codejock Software\MFC\Xtreme ToolkitPro v11.2.2\Source; ..\..\include\ide;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;standard.lib;gridctrld.lib;lexxer.lib;adamolib.lib;ThiraImageLib.lib;mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>d:\sviluppo\adamo\adamobin\$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\library\debug;..\..\..\AdamoCNC\bin\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\executable\Debug/Thira.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\executable\Debug/ide2.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\AdamoLink\MSGSERV\AdaPsw.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Cnc\AdamoCfgMachine.cpp" />
+    <ClCompile Include="..\Cnc\AdamoMachine.cpp" />
+    <ClCompile Include="..\Cnc\AdamoVMachine.cpp" />
+    <ClCompile Include="AdamoAboutBox.cpp" />
+    <ClCompile Include="AdamoCC.cpp" />
+    <ClCompile Include="AdamoCCFile.cpp" />
+    <ClCompile Include="AdamoConfHWView.cpp" />
+    <ClCompile Include="AdamoConfigHWView.cpp" />
+    <ClCompile Include="AdamoCopyPlant.cpp" />
+    <ClCompile Include="AdamoCPDlg.cpp" />
+    <ClCompile Include="AdamoDbgIOView.cpp" />
+    <ClCompile Include="AdamoDbgObjectView.cpp" />
+    <ClCompile Include="AdamoDbgVarView.cpp" />
+    <ClCompile Include="AdamoDGCards.cpp" />
+    <ClCompile Include="AdamoDGComm.cpp" />
+    <ClCompile Include="AdamoDGDevice.cpp" />
+    <ClCompile Include="AdamoDGDocument.cpp" />
+    <ClCompile Include="AdamoDGEthercat.cpp" />
+    <ClCompile Include="AdamoDGFilters.cpp" />
+    <ClCompile Include="AdamoDGFrame.cpp" />
+    <ClCompile Include="AdamoDGHardware.cpp" />
+    <ClCompile Include="AdamoDGModule.cpp" />
+    <ClCompile Include="AdamoDGSearch.cpp" />
+    <ClCompile Include="AdamoDGSoftware.cpp" />
+    <ClCompile Include="AdamoDGSSCNET.cpp" />
+    <ClCompile Include="AdamoDGSSCNETView.cpp" />
+    <ClCompile Include="AdamoDGView.cpp" />
+    <ClCompile Include="AdamoDlgShowModules.cpp" />
+    <ClCompile Include="AdamoEthercatAssi.cpp" />
+    <ClCompile Include="AdamoEthercatGrid.cpp" />
+    <ClCompile Include="AdamoEthercatIO.cpp" />
+    <ClCompile Include="AdamoEthercatIOAnalogico.cpp" />
+    <ClCompile Include="AdamoEthercatNode.cpp" />
+    <ClCompile Include="AdamoFileDati.cpp" />
+    <ClCompile Include="AdamoFindInFiles.cpp" />
+    <ClCompile Include="AdamoFindInFilesView.cpp" />
+    <ClCompile Include="AdamoHelpOptions.cpp" />
+    <ClCompile Include="AdamoinstallLibraries.cpp" />
+    <ClCompile Include="AdamoLibrary.cpp" />
+    <ClCompile Include="AdamoListErrors.cpp" />
+    <ClCompile Include="AdamoMDAxButton.cpp" />
+    <ClCompile Include="AdamoMDAxesView.cpp" />
+    <ClCompile Include="AdamoMDAxSettings.cpp" />
+    <ClCompile Include="AdamoMDAxStatus.cpp" />
+    <ClCompile Include="AdamoMDCommandBar.cpp" />
+    <ClCompile Include="AdamoMDDoc.cpp" />
+    <ClCompile Include="AdamoMDFrame.cpp" />
+    <ClCompile Include="AdamoMDIOView.cpp" />
+    <ClCompile Include="AdamoMDIOViewDlg.cpp" />
+    <ClCompile Include="AdamoMDSplittedView.cpp" />
+    <ClCompile Include="AdamoMDSplitter.cpp" />
+    <ClCompile Include="AdamoMDView.cpp" />
+    <ClCompile Include="AdamoOptions.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="AdamoReferenceView.cpp" />
+    <ClCompile Include="AdamoRenameMachine.cpp" />
+    <ClCompile Include="AdamoRSActiveXPreview.cpp" />
+    <ClCompile Include="AdamoRSCatalogue.cpp" />
+    <ClCompile Include="AdamoRSColumns.cpp" />
+    <ClCompile Include="AdamoRSDiagramAx.cpp" />
+    <ClCompile Include="AdamoRSDiagramButton.cpp" />
+    <ClCompile Include="AdamoRSDiagramCheckBox.cpp" />
+    <ClCompile Include="AdamoRSDiagramCombo.cpp" />
+    <ClCompile Include="AdamoRSDiagramEdit.cpp" />
+    <ClCompile Include="AdamoRSDiagramGrid.cpp" />
+    <ClCompile Include="AdamoRSDiagramGroupBox.cpp" />
+    <ClCompile Include="AdamoRSDiagramIAngularGauge.cpp" />
+    <ClCompile Include="AdamoRSDiagramILabel.cpp" />
+    <ClCompile Include="AdamoRSDiagramILinearGauge.cpp" />
+    <ClCompile Include="AdamoRSDiagramImage.cpp" />
+    <ClCompile Include="AdamoRSDiagramISevenSegment.cpp" />
+    <ClCompile Include="AdamoRSDiagramLabel.cpp" />
+    <ClCompile Include="AdamoRSDiagramLed.cpp" />
+    <ClCompile Include="AdamoRSDiagramList.cpp" />
+    <ClCompile Include="AdamoRSDiagramObjects.cpp" />
+    <ClCompile Include="AdamoRSDiagramPicture.cpp" />
+    <ClCompile Include="AdamoRSDiagramRadioButton.cpp" />
+    <ClCompile Include="AdamoRSDoc.cpp" />
+    <ClCompile Include="AdamoRSEditGrid.cpp" />
+    <ClCompile Include="AdamoRSEditIndexSupergrid.cpp" />
+    <ClCompile Include="AdamoRSEditor.cpp" />
+    <ClCompile Include="AdamoRSEditTableIndex.cpp" />
+    <ClCompile Include="AdamoRSFrame.cpp" />
+    <ClCompile Include="AdamoRSObjects.cpp" />
+    <ClCompile Include="AdamoRSOptions.cpp" />
+    <ClCompile Include="AdamoRSProperties.cpp" />
+    <ClCompile Include="AdamoRSValues.cpp" />
+    <ClCompile Include="AdamoRSView.cpp" />
+    <ClCompile Include="AdamoSEDoc.cpp" />
+    <ClCompile Include="AdamoSEFrame.cpp" />
+    <ClCompile Include="AdamoSelectDevice.cpp" />
+    <ClCompile Include="AdamoSEListView.cpp" />
+    <ClCompile Include="AdamoSettingsFile.cpp" />
+    <ClCompile Include="AdamoSEView.cpp" />
+    <ClCompile Include="AdamoShowGlobalsSupergrid.cpp" />
+    <ClCompile Include="AdamoShowMatrixSupergrid.cpp" />
+    <ClCompile Include="AdamoSink.cpp" />
+    <ClCompile Include="AdamoSplash.cpp" />
+    <ClCompile Include="AdamoSSCNETGrid.cpp" />
+    <ClCompile Include="AdamoStatusBar.cpp" />
+    <ClCompile Include="AdamoSynBaseCtrl.cpp" />
+    <ClCompile Include="AdamoSynButton.cpp" />
+    <ClCompile Include="AdamoSynCheckBox.cpp" />
+    <ClCompile Include="AdamoSynComboBox.cpp" />
+    <ClCompile Include="AdamoSynContainer.cpp" />
+    <ClCompile Include="AdamoSynEdit.cpp" />
+    <ClCompile Include="AdamoSynGrid.cpp" />
+    <ClCompile Include="AdamoSynGroupBox.cpp" />
+    <ClCompile Include="AdamoSynIAngularGauge.cpp" />
+    <ClCompile Include="AdamoSynIDisplay.cpp" />
+    <ClCompile Include="AdamoSynILabel.cpp" />
+    <ClCompile Include="AdamoSynILed.cpp" />
+    <ClCompile Include="AdamoSynILinearGauge.cpp" />
+    <ClCompile Include="AdamoSynImage.cpp" />
+    <ClCompile Include="AdamoSynIPicture.cpp" />
+    <ClCompile Include="AdamoSynLabel.cpp" />
+    <ClCompile Include="AdamoSynListBox.cpp" />
+    <ClCompile Include="AdamoSynPage.cpp" />
+    <ClCompile Include="AdamoSynRadioButton.cpp" />
+    <ClCompile Include="AdamoSynRTAx.cpp" />
+    <ClCompile Include="AdamoSynRTAxData.cpp" />
+    <ClCompile Include="AdamoTables.cpp" />
+    <ClCompile Include="AdamoTablesSupergrid.cpp" />
+    <ClCompile Include="AdamoTraduzione.cpp" />
+    <ClCompile Include="AdamoVersion.cpp" />
+    <ClCompile Include="ado2.cpp" />
+    <ClCompile Include="AllAxesView.cpp" />
+    <ClCompile Include="BitmapSlider.cpp" />
+    <ClCompile Include="Breakpoints.cpp" />
+    <ClCompile Include="BtnST.cpp" />
+    <ClCompile Include="BuildResource.cpp" />
+    <ClCompile Include="CallStack.cpp" />
+    <ClCompile Include="CanOpenAnalogIO.cpp" />
+    <ClCompile Include="CanOpenAxes.cpp" />
+    <ClCompile Include="CanOpenData.cpp" />
+    <ClCompile Include="CanOpenDigitalIO.cpp" />
+    <ClCompile Include="CBrowserContainer.cpp" />
+    <ClCompile Include="CFunctionsContainer.cpp" />
+    <ClCompile Include="CharCheck.cpp" />
+    <ClCompile Include="CiLabelX.cpp" />
+    <ClCompile Include="CiLedDiamondX.cpp" />
+    <ClCompile Include="CiLedRectangleX.cpp" />
+    <ClCompile Include="CiLedRoundX.cpp" />
+    <ClCompile Include="CiLinearGaugeX.cpp" />
+    <ClCompile Include="CiSevenSegmentAnalogX.cpp" />
+    <ClCompile Include="CObjectsContainer.cpp" />
+    <ClCompile Include="ColorStaticST.cpp" />
+    <ClCompile Include="ColumnTreeCtrl.cpp" />
+    <ClCompile Include="ColumnTreeView.cpp" />
+    <ClCompile Include="ConfFind.cpp" />
+    <ClCompile Include="ConfigDoc.cpp" />
+    <ClCompile Include="ConfigFrame.cpp" />
+    <ClCompile Include="ConfigHWGrid.cpp" />
+    <ClCompile Include="ConfigModuleGrid.cpp" />
+    <ClCompile Include="ConfTreeView.cpp" />
+    <ClCompile Include="CreateSlot.cpp" />
+    <ClCompile Include="CSyntaxContainer.cpp" />
+    <ClCompile Include="Curvefit.cpp" />
+    <ClCompile Include="CVariableContainer.cpp" />
+    <ClCompile Include="DataBase\AdamoAnalogIn.cpp" />
+    <ClCompile Include="DataBase\AdamoAnalogOut.cpp" />
+    <ClCompile Include="DataBase\AdamoAxis.cpp" />
+    <ClCompile Include="DataBase\AdamoBase.cpp" />
+    <ClCompile Include="DataBase\AdamoBaseList.cpp" />
+    <ClCompile Include="DataBase\AdamoCounter.cpp" />
+    <ClCompile Include="DataBase\AdamoDgtIn.cpp" />
+    <ClCompile Include="DataBase\AdamoDgtOut.cpp" />
+    <ClCompile Include="DataBase\AdamoGeneric.cpp" />
+    <ClCompile Include="DataBase\AdamoGroup.cpp" />
+    <ClCompile Include="DataBase\AdamoModule.cpp" />
+    <ClCompile Include="DataBase\AdamoPlant.cpp" />
+    <ClCompile Include="DataBase\AdamoTimer.cpp" />
+    <ClCompile Include="Debugger.cpp" />
+    <ClCompile Include="DeviceVariable.cpp" />
+    <ClCompile Include="DGEcMailBoxView.cpp" />
+    <ClCompile Include="DGSdoView.cpp" />
+    <ClCompile Include="DiagramClipboardHandler.cpp" />
+    <ClCompile Include="DiagramEditor.cpp" />
+    <ClCompile Include="DiagramEntity.cpp" />
+    <ClCompile Include="DiagramEntityContainer.cpp" />
+    <ClCompile Include="DiagramLine.cpp" />
+    <ClCompile Include="DiagramMenu.cpp" />
+    <ClCompile Include="DiagramPropertyDlg.cpp" />
+    <ClCompile Include="DialogSlot.cpp" />
+    <ClCompile Include="Digistatic.cpp" />
+    <ClCompile Include="DlgAdapters.cpp" />
+    <ClCompile Include="DlgConnectToTcp.cpp" />
+    <ClCompile Include="DlgEcConfigSingleSlave.cpp" />
+    <ClCompile Include="DlgEcConfigSlaves.cpp" />
+    <ClCompile Include="DlgEcMailBoxRead.cpp" />
+    <ClCompile Include="DlgEcMailBoxWrite.cpp" />
+    <ClCompile Include="DlgEditLuaLibrary.cpp" />
+    <ClCompile Include="DlgFindErrors.cpp" />
+    <ClCompile Include="DlgGetPath.cpp" />
+    <ClCompile Include="DlgHWCanOpenNet.cpp" />
+    <ClCompile Include="DlgHWCanOpenNodes.cpp" />
+    <ClCompile Include="DlgHWEthercatNet.cpp" />
+    <ClCompile Include="DlgHWModule.cpp" />
+    <ClCompile Include="DlgHWSSCNETNet.cpp" />
+    <ClCompile Include="DlgHWSSCNETStation.cpp" />
+    <ClCompile Include="DlgHWYoupsilon.cpp" />
+    <ClCompile Include="DlgIDRange.cpp" />
+    <ClCompile Include="DlgImportImage.cpp" />
+    <ClCompile Include="DlgKC.cpp" />
+    <ClCompile Include="DlgLuaLibraries.cpp" />
+    <ClCompile Include="DlgMbx.cpp" />
+    <ClCompile Include="DlgNewLuaLibrary.cpp" />
+    <ClCompile Include="DlgOscilloscope.cpp" />
+    <ClCompile Include="DlgSamples.cpp" />
+    <ClCompile Include="DlgSdoRead.cpp" />
+    <ClCompile Include="DlgSdoWrite.cpp" />
+    <ClCompile Include="DlgSelSymbol.cpp" />
+    <ClCompile Include="DlgSlotView.cpp" />
+    <ClCompile Include="DlgStrings.cpp" />
+    <ClCompile Include="DlgTriggers.cpp" />
+    <ClCompile Include="DockConfigHW.cpp" />
+    <ClCompile Include="DockConfigTree.cpp" />
+    <ClCompile Include="DockDbgIOView.cpp" />
+    <ClCompile Include="DockDbgObjectView.cpp" />
+    <ClCompile Include="DockDbgVarView.cpp" />
+    <ClCompile Include="DockDevice.cpp" />
+    <ClCompile Include="DockDevListView.cpp" />
+    <ClCompile Include="DockDevProperty.cpp" />
+    <ClCompile Include="DockDGSdo.cpp" />
+    <ClCompile Include="DockEcMailBox.cpp" />
+    <ClCompile Include="DockHelpOnLine.cpp" />
+    <ClCompile Include="DockHelpOnLineHtml.cpp" />
+    <ClCompile Include="DockLangView.cpp" />
+    <ClCompile Include="DockListErrors.cpp" />
+    <ClCompile Include="DockOscilloscope.cpp" />
+    <ClCompile Include="DockRS.cpp" />
+    <ClCompile Include="DockThiraLuaObjects.cpp" />
+    <ClCompile Include="ErrorsDlg.cpp" />
+    <ClCompile Include="Executor.cpp" />
+    <ClCompile Include="FileFinder.cpp" />
+    <ClCompile Include="FindDlg.cpp" />
+    <ClCompile Include="font.cpp" />
+    <ClCompile Include="GlobalArr.cpp" />
+    <ClCompile Include="GlobalMatrix.cpp" />
+    <ClCompile Include="GlobalVariable.cpp" />
+    <ClCompile Include="GridView.cpp" />
+    <ClCompile Include="GroupFactory.cpp" />
+    <ClCompile Include="GruppDevice.cpp" />
+    <ClCompile Include="HelpOnLineHTMLView.cpp" />
+    <ClCompile Include="HelpOnLineView.cpp" />
+    <ClCompile Include="HTMLCtrl.cpp" />
+    <ClCompile Include="HTMLDoc.cpp" />
+    <ClCompile Include="HTMLFilter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="HTMLFrame.cpp" />
+    <ClCompile Include="HTMLView.cpp" />
+    <ClCompile Include="iangulargaugex.cpp" />
+    <ClCompile Include="ide2.cpp" />
+    <ClCompile Include="iknobx.cpp" />
+    <ClCompile Include="iledbarx.cpp" />
+    <ClCompile Include="ImageResource.cpp" />
+    <ClCompile Include="IOSuperGrid.cpp" />
+    <ClCompile Include="islidingscalex.cpp" />
+    <ClCompile Include="iswitchleverx.cpp" />
+    <ClCompile Include="iswitchpanelx.cpp" />
+    <ClCompile Include="KSFileDialog.cpp" />
+    <ClCompile Include="Label.cpp" />
+    <ClCompile Include="LangView.cpp" />
+    <ClCompile Include="listeditctrl.cpp" />
+    <ClCompile Include="ListViewErrorsCustomColor.cpp" />
+    <ClCompile Include="LuaDoc.cpp" />
+    <ClCompile Include="LuaEditor.cpp" />
+    <ClCompile Include="LuaFrame.cpp" />
+    <ClCompile Include="LuaHelper.cpp" />
+    <ClCompile Include="LuaView.cpp" />
+    <ClCompile Include="MainFrame.cpp" />
+    <ClCompile Include="NewDev.cpp" />
+    <ClCompile Include="NewPlant.cpp" />
+    <ClCompile Include="OleDropSourceEx.cpp" />
+    <ClCompile Include="OpenSource.cpp" />
+    <ClCompile Include="OptionDlg.cpp" />
+    <ClCompile Include="OscChannelData.cpp" />
+    <ClCompile Include="OscProp.cpp" />
+    <ClCompile Include="OscView.cpp" />
+    <ClCompile Include="OutputWnd.cpp" />
+    <ClCompile Include="PaneColorSet.cpp" />
+    <ClCompile Include="PaneView.cpp" />
+    <ClCompile Include="PAREDIT.CPP" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="picture.cpp" />
+    <ClCompile Include="PlaneCCFile.cpp" />
+    <ClCompile Include="PlantManage.cpp" />
+    <ClCompile Include="preprocessor.cpp">
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PreviewResource.cpp" />
+    <ClCompile Include="Project.cpp" />
+    <ClCompile Include="ProjectFile.cpp" />
+    <ClCompile Include="ProjectNew.cpp" />
+    <ClCompile Include="ProjectProperties.cpp" />
+    <ClCompile Include="PropertyGridItemEx.cpp" />
+    <ClCompile Include="PropSet.cxx" />
+    <ClCompile Include="ReplaceDlg.cpp" />
+    <ClCompile Include="ResourceFile.cpp" />
+    <ClCompile Include="SamplesGrid.cpp" />
+    <ClCompile Include="ScintillaBar.cpp" />
+    <ClCompile Include="ScintillaView.cpp" />
+    <ClCompile Include="SdoReadGrid.cpp" />
+    <ClCompile Include="SdoWriteGrid.cpp" />
+    <ClCompile Include="ShowGlobalMatrix.cpp" />
+    <ClCompile Include="ShowGlobalVars.cpp" />
+    <ClCompile Include="ShowModulesSuperGrid.cpp" />
+    <ClCompile Include="SlotView.cpp" />
+    <ClCompile Include="SSCNETConf.cpp" />
+    <ClCompile Include="SSCNETIO.cpp" />
+    <ClCompile Include="SSCNETParameters.cpp" />
+    <ClCompile Include="SSCNetParGrid.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StdGrfx.cpp" />
+    <ClCompile Include="supergridctrl.cpp" />
+    <ClCompile Include="TabBitmap.cpp" />
+    <ClCompile Include="ThiraLuaObjectsView.cpp" />
+    <ClCompile Include="Tokenizer.cpp" />
+    <ClCompile Include="TransparentStatic.cpp" />
+    <ClCompile Include="TreeViewFiles.cpp" />
+    <ClCompile Include="TriggerGrid.cpp" />
+    <ClCompile Include="TypeSource.cpp" />
+    <ClCompile Include="UndoItem.cpp" />
+    <ClCompile Include="UserStrings.cpp" />
+    <ClCompile Include="VariablesBar.cpp" />
+    <ClCompile Include="VarListView.cpp" />
+    <ClCompile Include="WatchBar.cpp" />
+    <ClCompile Include="WatchListView.cpp" />
+    <ClCompile Include="Workspace.cpp" />
+    <ClCompile Include="WorkspaceWnd.cpp" />
+    <ClCompile Include="xSkinButton.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Adamo.PrimaConfigurazioneHardwareNuova\AdamoIDE\include\Ide\sscnetparameters.h" />
+    <ClInclude Include="..\..\include\AdamoEthercatGrid.h" />
+    <ClInclude Include="..\..\include\AdamoVersion.h" />
+    <ClInclude Include="..\..\include\Cfg\AdamoVar.h" />
+    <ClInclude Include="..\..\include\Cnc\AdamoMachine.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoCC.h" />
+    <ClInclude Include="..\..\include\Ide\adamoconfhwview.h" />
+    <ClInclude Include="..\..\include\Ide\adamoconfighwview.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoCopyPlant.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoDGComm.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoDGModule.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoDlgShowModules.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoFileDati.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoFindInFilesView.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoIdeEthercat.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoMDAxSettings.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoMDSplitter.h" />
+    <ClInclude Include="..\..\include\Ide\adamomdsscnet.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoMDView.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoRS.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoRSDiagramObjects.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoRSEditIndexSupergrid.h" />
+    <ClInclude Include="..\..\include\Ide\adamorsedittableindex.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoRSObjects.h" />
+    <ClInclude Include="..\..\include\Ide\adamorstemplate.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoSelectDevice.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoSink.h" />
+    <ClInclude Include="..\..\include\Ide\adamosscnetgrid.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoSw.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoSynImage.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoSynIPicture.h" />
+    <ClInclude Include="..\..\include\Ide\adamotables.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoTablesSupergrid.h" />
+    <ClInclude Include="..\..\include\Ide\AdamoTraduzione.h" />
+    <ClInclude Include="..\..\include\Ide\AdvancedStatusBar.h" />
+    <ClInclude Include="..\..\include\Ide\BitmapSlider.h" />
+    <ClInclude Include="..\..\include\Ide\breakpoints.h" />
+    <ClInclude Include="..\..\include\Ide\BtnST.h" />
+    <ClInclude Include="..\..\include\Ide\CallStack.h" />
+    <ClInclude Include="..\..\include\Ide\canopenanalogio.h" />
+    <ClInclude Include="..\..\include\Ide\canopendata.h" />
+    <ClInclude Include="..\..\include\Ide\canopendigitalio.h" />
+    <ClInclude Include="..\..\include\Ide\CBrowserContainer.h" />
+    <ClInclude Include="..\..\include\Ide\CharCheck.h" />
+    <ClInclude Include="..\..\include\Ide\CiLabelX.h" />
+    <ClInclude Include="..\..\include\Ide\CiLedRectangleX.h" />
+    <ClInclude Include="..\..\include\Ide\CiSevenSegmentAnalogX.h" />
+    <ClInclude Include="..\..\include\Ide\ColorStaticST.h" />
+    <ClInclude Include="..\..\include\Ide\conffind.h" />
+    <ClInclude Include="..\..\include\Ide\configdoc.h" />
+    <ClInclude Include="..\..\include\Ide\ConfigFrame.h" />
+    <ClInclude Include="..\..\include\Ide\ConfigHWGrid.h" />
+    <ClInclude Include="..\..\include\Ide\ConfTreeView.h" />
+    <ClInclude Include="..\..\include\Ide\CVariableContainer.h" />
+    <ClInclude Include="..\..\include\Ide\Data.h" />
+    <ClInclude Include="..\..\include\Ide\Debugger.h" />
+    <ClInclude Include="..\..\include\Ide\DebuggerMessages.h" />
+    <ClInclude Include="..\..\include\Ide\DeviceDefine.h" />
+    <ClInclude Include="..\..\include\Ide\DeviceGridView.h" />
+    <ClInclude Include="..\..\include\Ide\DGSdoView.h" />
+    <ClInclude Include="..\..\include\Ide\DialogSlot.h" />
+    <ClInclude Include="..\..\include\Ide\dlghwcanopennet.h" />
+    <ClInclude Include="..\..\include\Ide\dlghwcanopennodes.h" />
+    <ClInclude Include="..\..\include\Ide\dlghwsscnetnet.h" />
+    <ClInclude Include="..\..\include\Ide\dlghwsscnetstation.h" />
+    <ClInclude Include="..\..\include\Ide\DlgHWYoupsilon.h" />
+    <ClInclude Include="..\..\include\Ide\dlgimportimage.h" />
+    <ClInclude Include="..\..\include\Ide\DlgSlotView.h" />
+    <ClInclude Include="..\..\include\Ide\dlgstrings.h" />
+    <ClInclude Include="..\..\include\Ide\DockConfigHW.h" />
+    <ClInclude Include="..\..\include\Ide\DockConfigTree.h" />
+    <ClInclude Include="..\..\include\Ide\DockDbgIOView.h" />
+    <ClInclude Include="..\..\include\Ide\DockDevice.h" />
+    <ClInclude Include="..\..\include\Ide\DockDevListView.h" />
+    <ClInclude Include="..\..\include\Ide\DockDevProperty.h" />
+    <ClInclude Include="..\..\include\Ide\DockDGSdo.h" />
+    <ClInclude Include="..\..\include\Ide\DockLangView.h" />
+    <ClInclude Include="..\..\include\Ide\ErrorsComboBox.h" />
+    <ClInclude Include="..\..\include\Ide\ErrorsDlg.h" />
+    <ClInclude Include="..\..\include\Ide\Executor.h" />
+    <ClInclude Include="..\..\include\Ide\FindDlg.h" />
+    <ClInclude Include="..\..\include\Ide\FlatTabCtrl.h" />
+    <ClInclude Include="..\..\include\Ide\GenDC.h" />
+    <ClInclude Include="..\..\include\Ide\GlobalArr.h" />
+    <ClInclude Include="..\..\include\Ide\GlobalMatrix.h" />
+    <ClInclude Include="..\..\include\Ide\GlobalVariable.h" />
+    <ClInclude Include="..\..\include\Ide\GridCtrlDev.h" />
+    <ClInclude Include="..\..\include\Ide\GridCtrlDevCan.h" />
+    <ClInclude Include="..\..\include\Ide\GridDeviceBase.h" />
+    <ClInclude Include="..\..\include\Ide\GridView.h" />
+    <ClInclude Include="..\..\include\Ide\HTMLFilter.h" />
+    <ClInclude Include="..\..\include\Ide\ide2.h" />
+    <ClInclude Include="..\..\include\Ide\Ide2_i.h" />
+    <ClInclude Include="..\..\include\Ide\imageresource.h" />
+    <ClInclude Include="..\..\include\Ide\KSFileDialog.h" />
+    <ClInclude Include="..\..\include\Ide\LangView.h" />
+    <ClInclude Include="..\..\include\Ide\LedButton.h" />
+    <ClInclude Include="..\..\include\Ide\LuaDoc.h" />
+    <ClInclude Include="..\..\include\Ide\LuaEditor.h" />
+    <ClInclude Include="..\..\include\Ide\LuaFrame.h" />
+    <ClInclude Include="..\..\include\Ide\LuaHelper.h" />
+    <ClInclude Include="..\..\include\Ide\LuaView.h" />
+    <ClInclude Include="..\..\include\Ide\mainframe.h" />
+    <ClInclude Include="..\..\include\Ide\NewDev.h" />
+    <ClInclude Include="..\..\include\Ide\NewPlant.h" />
+    <ClInclude Include="..\..\include\Ide\OpenSource.h" />
+    <ClInclude Include="..\..\include\Ide\OptionDlg.h" />
+    <ClInclude Include="..\..\include\Ide\OutputView.h" />
+    <ClInclude Include="..\..\include\Ide\OutputWnd.h" />
+    <ClInclude Include="..\..\include\Ide\PAREDIT.H" />
+    <ClInclude Include="..\..\include\Ide\PlaneCCFile.h" />
+    <ClInclude Include="..\..\include\Ide\PlantManage.h" />
+    <ClInclude Include="..\..\include\Ide\preprocessor.h" />
+    <ClInclude Include="..\..\include\Ide\Project.h" />
+    <ClInclude Include="..\..\include\Ide\ProjectFile.h" />
+    <ClInclude Include="..\..\include\Ide\ProjectNew.h" />
+    <ClInclude Include="..\..\include\Ide\ProjectProperties.h" />
+    <ClInclude Include="..\..\include\Ide\PropertyGridItemEx.h" />
+    <ClInclude Include="..\..\include\Ide\ReplaceDlg.h" />
+    <ClInclude Include="..\..\include\Ide\ResourceFile.h" />
+    <ClInclude Include="..\..\include\Ide\ScintillaBar.h" />
+    <ClInclude Include="..\..\include\Ide\ScintillaView.h" />
+    <ClInclude Include="..\..\include\Ide\SdoReadGrid.h" />
+    <ClInclude Include="..\..\include\Ide\SdoWriteGrid.h" />
+    <ClInclude Include="..\..\include\Ide\SlotView.h" />
+    <ClInclude Include="..\..\include\Ide\SSCNetParGrid.h" />
+    <ClInclude Include="..\..\include\Ide\TreeViewFiles.h" />
+    <ClInclude Include="..\..\include\Ide\TypeSource.h" />
+    <ClInclude Include="..\..\include\Ide\VariablesBar.h" />
+    <ClInclude Include="..\..\include\Ide\VarListView.h" />
+    <ClInclude Include="..\..\include\Ide\VisValEdit.h" />
+    <ClInclude Include="..\..\include\Ide\WatchBar.h" />
+    <ClInclude Include="..\..\include\Ide\WatchListView.h" />
+    <ClInclude Include="..\..\include\Ide\Workspace.h" />
+    <ClInclude Include="..\..\include\Ide\WorkspaceWnd.h" />
+    <ClInclude Include="AdamoAboutBox.h" />
+    <ClInclude Include="AdamoConversioneFormato.h" />
+    <ClInclude Include="AdamoCPDlg.h" />
+    <ClInclude Include="AdamoDbgIOView.h" />
+    <ClInclude Include="AdamoDbgVarCtrl.h" />
+    <ClInclude Include="AdamoDbgVarView.h" />
+    <ClInclude Include="AdamoDGDocument.h" />
+    <ClInclude Include="AdamoDGEthercat.h" />
+    <ClInclude Include="AdamoDGFilters.h" />
+    <ClInclude Include="AdamoDGFrame.h" />
+    <ClInclude Include="AdamoDGHardware.h" />
+    <ClInclude Include="AdamoDGSearch.h" />
+    <ClInclude Include="AdamoDGView.h" />
+    <ClInclude Include="AdamoEthercatAssi.h" />
+    <ClInclude Include="AdamoEthercatGrid.h" />
+    <ClInclude Include="AdamoEthercatIO.h" />
+    <ClInclude Include="AdamoEthercatIOAnalogico.h" />
+    <ClInclude Include="AdamoEthercatNode.h" />
+    <ClInclude Include="AdamoFindInFiles.h" />
+    <ClInclude Include="AdamoMDAxButton.h" />
+    <ClInclude Include="AdamoMDAxesView.h" />
+    <ClInclude Include="AdamoMDDoc.h" />
+    <ClInclude Include="AdamoMDIOView.h" />
+    <ClInclude Include="AdamoMDIOViewDlg.h" />
+    <ClInclude Include="AdamoMDSplittedView.h" />
+    <ClInclude Include="AdamoRenameMachine.h" />
+    <ClInclude Include="AdamoRSColumns.h" />
+    <ClInclude Include="AdamoRSEditGrid.h" />
+    <ClInclude Include="AdamoRSOptions.h" />
+    <ClInclude Include="AdamoRSValues.h" />
+    <ClInclude Include="AdamoShowMatrixSupergrid.h" />
+    <ClInclude Include="AdamoSink.h" />
+    <ClInclude Include="AdamoSplash.h" />
+    <ClInclude Include="AdamoSw.h" />
+    <ClInclude Include="AdamoSynBaseCtrl.h" />
+    <ClInclude Include="AdamoSynButton.h" />
+    <ClInclude Include="AdamoSynCheckBox.h" />
+    <ClInclude Include="AdamoSynComboBox.h" />
+    <ClInclude Include="AdamoSynContainer.h" />
+    <ClInclude Include="AdamoSynEdit.h" />
+    <ClInclude Include="AdamoSynGrid.h" />
+    <ClInclude Include="AdamoSynIAngularGauge.h" />
+    <ClInclude Include="AdamoSynIDisplay.h" />
+    <ClInclude Include="AdamoSynILabel.h" />
+    <ClInclude Include="AdamoSynILed.h" />
+    <ClInclude Include="AdamoSynILinearGauge.h" />
+    <ClInclude Include="AdamoSynLabel.h" />
+    <ClInclude Include="AdamoSynListBox.h" />
+    <ClInclude Include="AdamoSynPage.h" />
+    <ClInclude Include="AdamoSynRTAx.h" />
+    <ClInclude Include="AdamoSynRTAxData.h" />
+    <ClInclude Include="AdvancedStatusBar.h" />
+    <ClInclude Include="AllAxesView.h" />
+    <ClInclude Include="BaseDialog.h" />
+    <ClInclude Include="BuildResource.h" />
+    <ClInclude Include="CallStack.h" />
+    <ClInclude Include="CiLinearGaugeX.h" />
+    <ClInclude Include="ConfigDoc.h" />
+    <ClInclude Include="ConfigFrame.h" />
+    <ClInclude Include="CreateSlot.h" />
+    <ClInclude Include="DataBase\AdamoTimer.h" />
+    <ClInclude Include="Debugger.h" />
+    <ClInclude Include="DeviceListView.h" />
+    <ClInclude Include="DeviceVariable.h" />
+    <ClInclude Include="DGEcMailBoxView.h" />
+    <ClInclude Include="DialogSlot.h" />
+    <ClInclude Include="DlgEcConfigSingleSlave.h" />
+    <ClInclude Include="DlgEcConfigSlaves.h" />
+    <ClInclude Include="DlgEcMailBoxRead.h" />
+    <ClInclude Include="DlgEcMailBoxWrite.h" />
+    <ClInclude Include="DlgFindErrors.h" />
+    <ClInclude Include="DlgFPGARegisters.h" />
+    <ClInclude Include="DlgHWEthercatNet.h" />
+    <ClInclude Include="DlgIDRange.h" />
+    <ClInclude Include="DlgOscilloscope.h" />
+    <ClInclude Include="DlgSamples.h" />
+    <ClInclude Include="DlgSdoRead.h" />
+    <ClInclude Include="DlgSdoWrite.h" />
+    <ClInclude Include="DlgSelSymbol.h" />
+    <ClInclude Include="DlgSlotView.h" />
+    <ClInclude Include="DlgStrings.h" />
+    <ClInclude Include="DlgTriggers.h" />
+    <ClInclude Include="DockConfigTree.h" />
+    <ClInclude Include="DockDbgObjectView.h" />
+    <ClInclude Include="DockDbgVarView.h" />
+    <ClInclude Include="DockDevice.h" />
+    <ClInclude Include="DockDevListView.h" />
+    <ClInclude Include="DockDevProperty.h" />
+    <ClInclude Include="DockOscilloscope.h" />
+    <ClInclude Include="ErrorsComboBox.h" />
+    <ClInclude Include="ErrorsDlg.h" />
+    <ClInclude Include="Executor.h" />
+    <ClInclude Include="GlobalArr.h" />
+    <ClInclude Include="GlobalMatrix.h" />
+    <ClInclude Include="GridView.h" />
+    <ClInclude Include="ide2.h" />
+    <ClInclude Include="iledbarx.h" />
+    <ClInclude Include="InplaceComboBox.h" />
+    <ClInclude Include="IOSuperGrid.h" />
+    <ClInclude Include="iplotannotationx.h" />
+    <ClInclude Include="iplotaxisx.h" />
+    <ClInclude Include="iplotchannelx.h" />
+    <ClInclude Include="iplotdatacursorx.h" />
+    <ClInclude Include="iplotdataviewx.h" />
+    <ClInclude Include="iplotlabelx.h" />
+    <ClInclude Include="iplotlegendx.h" />
+    <ClInclude Include="iplotlimitx.h" />
+    <ClInclude Include="iplottablecolumnx.h" />
+    <ClInclude Include="iplottablex.h" />
+    <ClInclude Include="iplottoolbarx.h" />
+    <ClInclude Include="iplotx.h" />
+    <ClInclude Include="islidingscalex.h" />
+    <ClInclude Include="iswitchleverx.h" />
+    <ClInclude Include="iswitchpanelx.h" />
+    <ClInclude Include="listeditctrl.h" />
+    <ClInclude Include="LuaDoc.h" />
+    <ClInclude Include="LuaEditor.h" />
+    <ClInclude Include="LuaFrame.h" />
+    <ClInclude Include="LuaHelper.h" />
+    <ClInclude Include="LuaView.h" />
+    <ClInclude Include="NewDev.h" />
+    <ClInclude Include="NewPlant.h" />
+    <ClInclude Include="OscChannelData.h" />
+    <ClInclude Include="OscProp.h" />
+    <ClInclude Include="OscView.h" />
+    <ClInclude Include="OutputWnd.h" />
+    <ClInclude Include="PreviewResource.h" />
+    <ClInclude Include="Project.h" />
+    <ClInclude Include="ProjectFile.h" />
+    <ClInclude Include="ProjectNew.h" />
+    <ClInclude Include="ProjectProperties.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ScintillaBar.h" />
+    <ClInclude Include="ScintillaView.h" />
+    <ClInclude Include="ShowGlobalMatrix.h" />
+    <ClInclude Include="ShowModulesSuperGrid.h" />
+    <ClInclude Include="SSCNETConf.h" />
+    <ClInclude Include="SSCNETIO.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TransparentCheckBox.h" />
+    <ClInclude Include="TreeViewFiles.h" />
+    <ClInclude Include="UserStrings.h" />
+    <ClInclude Include="VariablesBar.h" />
+    <ClInclude Include="WatchBar.h" />
+    <ClInclude Include="WatchList.h" />
+    <ClInclude Include="WatchListView.h" />
+    <ClInclude Include="Workspace.h" />
+    <ClInclude Include="WorkspaceWnd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Ide2.idl">
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Win32</TargetEnvironment>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateStublessProxies>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Ide2_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Ide2_i.c</InterfaceIdentifierFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Win32</TargetEnvironment>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateStublessProxies>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Ide2_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Ide2_i.c</InterfaceIdentifierFileName>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ide2.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\Ups\Cursor\CursorDrop.png" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButGrandeHoverStop.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButGrandeMask.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButGrandePremutoStop.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButGrandeStop.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoHoverLoopAperto.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoHoverLoopChiuso.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoHoverMeno.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoHoverPiu.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoLoopAperto.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoLoopChiuso.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoMask.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoMeno.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPiu.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoLoopAperto.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoLoopChiuso.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoMeno.bmp" />
+    <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoPiu.bmp" />
+    <Image Include="res\Accelerazione.bmp" />
+    <Image Include="res\AdaDoc.ico" />
+    <Image Include="res\Alarm.ico" />
+    <Image Include="res\AllErrors.bmp" />
+    <Image Include="res\AngularGauge.bmp" />
+    <Image Include="res\ArrowDownP.bmp" />
+    <Image Include="res\ArrowDownU.bmp" />
+    <Image Include="res\ArrowMask.bmp" />
+    <Image Include="res\ArrowPageDownP.bmp" />
+    <Image Include="res\ArrowPageDownU.bmp" />
+    <Image Include="res\ArrowPageUpP.bmp" />
+    <Image Include="res\ArrowPageUpU.bmp" />
+    <Image Include="res\ArrowUpP.bmp" />
+    <Image Include="res\ArrowUpU.bmp" />
+    <Image Include="res\b1down.bmp" />
+    <Image Include="res\b1gray.bmp" />
+    <Image Include="res\b1mask.bmp" />
+    <Image Include="res\b1norm.bmp" />
+    <Image Include="res\b1norm1.bmp" />
+    <Image Include="res\b2down.bmp" />
+    <Image Include="res\b2gray.bmp" />
+    <Image Include="res\b2mask.bmp" />
+    <Image Include="res\b2norm.bmp" />
+    <Image Include="res\b2over.bmp" />
+    <Image Include="res\b3down.bmp" />
+    <Image Include="res\b3gray.bmp" />
+    <Image Include="res\b3mask.bmp" />
+    <Image Include="res\b3norm.bmp" />
+    <Image Include="res\b3over.bmp" />
+    <Image Include="res\b4down.bmp" />
+    <Image Include="res\b4gray.bmp" />
+    <Image Include="res\b4mask.bmp" />
+    <Image Include="res\b4norm.bmp" />
+    <Image Include="res\b4over.bmp" />
+    <Image Include="res\b5down.bmp" />
+    <Image Include="res\b5gray.bmp" />
+    <Image Include="res\b5mask.bmp" />
+    <Image Include="res\b5norm.bmp" />
+    <Image Include="res\b5over.bmp" />
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bitmap2.bmp" />
+    <Image Include="res\bitmap3.bmp" />
+    <Image Include="res\bitmap4.bmp" />
+    <Image Include="res\bitmap5.bmp" />
+    <Image Include="res\bitmap6.bmp" />
+    <Image Include="res\bitmap7.bmp" />
+    <Image Include="res\BitmapErrorsList.bmp" />
+    <Image Include="res\BitmapErrorsList2.bmp" />
+    <Image Include="res\black.png" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\bmp00003.bmp" />
+    <Image Include="res\bmp00004.bmp" />
+    <Image Include="res\bmp00005.bmp" />
+    <Image Include="res\bmp00006.bmp" />
+    <Image Include="res\bmp00007.bmp" />
+    <Image Include="res\bmp00008.bmp" />
+    <Image Include="res\bmp00009.bmp" />
+    <Image Include="res\bmp00010.bmp" />
+    <Image Include="res\bmp00011.bmp" />
+    <Image Include="res\bmp00012.bmp" />
+    <Image Include="res\bmp00013.bmp" />
+    <Image Include="res\bmp00014.bmp" />
+    <Image Include="res\bmp00015.bmp" />
+    <Image Include="res\bmp00016.bmp" />
+    <Image Include="res\bmp00017.bmp" />
+    <Image Include="res\bmp00018.bmp" />
+    <Image Include="res\bmp00019.bmp" />
+    <Image Include="res\bmp00020.bmp" />
+    <Image Include="res\bmp00021.bmp" />
+    <Image Include="res\bmp00022.bmp" />
+    <Image Include="res\bmp00023.bmp" />
+    <Image Include="res\bmp00024.bmp" />
+    <Image Include="res\bmp00025.bmp" />
+    <Image Include="res\bmp00026.bmp" />
+    <Image Include="res\bmp00027.bmp" />
+    <Image Include="res\bmp00028.bmp" />
+    <Image Include="res\bmp00029.bmp" />
+    <Image Include="res\bmp00030.bmp" />
+    <Image Include="res\bmp00031.bmp" />
+    <Image Include="res\bmp00032.bmp" />
+    <Image Include="res\bmp00033.bmp" />
+    <Image Include="res\bmp00034.bmp" />
+    <Image Include="res\bmp00035.bmp" />
+    <Image Include="res\bmp00036.bmp" />
+    <Image Include="res\bmp00037.bmp" />
+    <Image Include="res\bmp00038.bmp" />
+    <Image Include="res\bmp00039.bmp" />
+    <Image Include="res\bmp00040.bmp" />
+    <Image Include="res\bmp00041.bmp" />
+    <Image Include="res\bmp00042.bmp" />
+    <Image Include="res\bmpDate.bmp" />
+    <Image Include="res\BmpSfondoPagine.bmp" />
+    <Image Include="res\bmp_empt.bmp" />
+    <Image Include="res\BreakPoints.bmp" />
+    <Image Include="res\ButGrandeHoverStop.bmp" />
+    <Image Include="res\ButGrandeMask.bmp" />
+    <Image Include="res\ButGrandePremutoStop.bmp" />
+    <Image Include="res\ButGrandeStop.bmp" />
+    <Image Include="res\ButOscMask.bmp" />
+    <Image Include="res\ButOscMinusD.bmp" />
+    <Image Include="res\ButOscMinusU.bmp" />
+    <Image Include="res\ButOscPlusD.bmp" />
+    <Image Include="res\ButOscPlusU.bmp" />
+    <Image Include="res\ButRadioMask.bmp" />
+    <Image Include="res\ButRadioNormal.bmp" />
+    <Image Include="res\ButRadioSelected.bmp" />
+    <Image Include="res\ButStrettoHoverLoopAperto.bmp" />
+    <Image Include="res\ButStrettoHoverLoopChiuso.bmp" />
+    <Image Include="res\ButStrettoHoverMeno.bmp" />
+    <Image Include="res\ButStrettoHoverPiu.bmp" />
+    <Image Include="res\ButStrettoLoopAperto.bmp" />
+    <Image Include="res\ButStrettoLoopChiuso.bmp" />
+    <Image Include="res\ButStrettoMask.bmp" />
+    <Image Include="res\ButStrettoMeno.bmp" />
+    <Image Include="res\ButStrettoPiu.bmp" />
+    <Image Include="res\ButStrettoPremutoLoopAperto.bmp" />
+    <Image Include="res\ButStrettoPremutoLoopChiuso.bmp" />
+    <Image Include="res\ButStrettoPremutoMeno.bmp" />
+    <Image Include="res\ButStrettoPremutoPiu.bmp" />
+    <Image Include="res\ButtonStartTaraturaMask.bmp" />
+    <Image Include="res\ButtonStartTaraturaOff.bmp" />
+    <Image Include="res\ButtonStartTaraturaOn.bmp" />
+    <Image Include="res\ButtonStopTaraturaMask.bmp" />
+    <Image Include="res\ButtonStopTaraturaOff.bmp" />
+    <Image Include="res\ButtonStopTaraturaOn.bmp" />
+    <Image Include="res\CapAlarm.bmp" />
+    <Image Include="res\CapAnteprima.bmp" />
+    <Image Include="res\CapBooleanType.bmp" />
+    <Image Include="res\CapComment.bmp" />
+    <Image Include="res\CapCycErrors.bmp" />
+    <Image Include="res\capdgcom.bmp" />
+    <Image Include="res\capdialogs.bmp" />
+    <Image Include="res\CapFunction.bmp" />
+    <Image Include="res\CapGCode.bmp" />
+    <Image Include="res\CapGomma.bmp" />
+    <Image Include="res\CapHWErrors.bmp" />
+    <Image Include="res\CapImmagine.bmp" />
+    <Image Include="res\CapIntErrors.bmp" />
+    <Image Include="res\CapLine.bmp" />
+    <Image Include="res\CapMessaggi.bmp" />
+    <Image Include="res\CapMessaggiIndice.bmp" />
+    <Image Include="res\CapMessaggiIndiceStringa.bmp" />
+    <Image Include="res\CapModules.bmp" />
+    <Image Include="res\CapName.bmp" />
+    <Image Include="res\CapNumberType.bmp" />
+    <Image Include="res\CapPriority.bmp" />
+    <Image Include="res\CapSlots.bmp" />
+    <Image Include="res\CapString.bmp" />
+    <Image Include="res\CapStringType.bmp" />
+    <Image Include="res\CapTask.bmp" />
+    <Image Include="res\CapTaskNew.bmp" />
+    <Image Include="res\CapTime.bmp" />
+    <Image Include="res\CaptionAllErrors.bmp" />
+    <Image Include="res\captracecomm.bmp" />
+    <Image Include="res\CapTraceHW.bmp" />
+    <Image Include="res\ClearOsc.bmp" />
+    <Image Include="res\ClearOscPressed.bmp" />
+    <Image Include="res\CommLed.bmp" />
+    <Image Include="res\conf_tre.bmp" />
+    <Image Include="res\Connecto.bmp" />
+    <Image Include="res\CustomParameters.bmp" />
+    <Image Include="res\Decelerazione.bmp" />
+    <Image Include="res\DeviceGroup.bmp" />
+    <Image Include="res\Disco.bmp" />
+    <Image Include="res\Dispositivo.bmp" />
+    <Image Include="res\eyeblue.bmp" />
+    <Image Include="res\eyecl2.bmp" />
+    <Image Include="res\eyeclosed.bmp" />
+    <Image Include="res\eyegray.bmp" />
+    <Image Include="res\eyegreen.bmp" />
+    <Image Include="res\eyemask.bmp" />
+    <Image Include="res\eyered.bmp" />
+    <Image Include="res\filetypes.bmp" />
+    <Image Include="res\Finestra.bmp" />
+    <Image Include="res\GaugeRSRosso.bmp" />
+    <Image Include="res\GaugeRSVerde.bmp" />
+    <Image Include="res\gomma.bmp" />
+    <Image Include="res\Gomma.ico" />
+    <Image Include="res\green.png" />
+    <Image Include="res\HWTabView.bmp" />
+    <Image Include="res\i.bmp" />
+    <Image Include="res\ico00001.ico" />
+    <Image Include="res\ico00002.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\icon2.ico" />
+    <Image Include="res\icon3.ico" />
+    <Image Include="res\icon4.ico" />
+    <Image Include="res\icon5.ico" />
+    <Image Include="res\ID.bmp" />
+    <Image Include="res\ide2.ico" />
+    <Image Include="res\il_file.bmp" />
+    <Image Include="res\il_tab.bmp" />
+    <Image Include="res\InputOff.bmp" />
+    <Image Include="res\InputOn.bmp" />
+    <Image Include="res\JogCloseLoop.bmp" />
+    <Image Include="res\JogCloseLoopPressed.bmp" />
+    <Image Include="res\JogMinus.bmp" />
+    <Image Include="res\JogMinusPressed.bmp" />
+    <Image Include="res\JogOpenLoop.bmp" />
+    <Image Include="res\JogOpenLoopPressed.bmp" />
+    <Image Include="res\JogPlus.bmp" />
+    <Image Include="res\JogPlusPressed.bmp" />
+    <Image Include="res\JogStop.bmp" />
+    <Image Include="res\JogStopPressed.bmp" />
+    <Image Include="res\Label.bmp" />
+    <Image Include="res\Led.bmp" />
+    <Image Include="res\LedRosso.bmp" />
+    <Image Include="res\LedRS.bmp" />
+    <Image Include="res\LedRSRosso.bmp" />
+    <Image Include="res\LedVerde.bmp" />
+    <Image Include="res\LinearGauge.bmp" />
+    <Image Include="res\LinearGaugeRSBlu.bmp" />
+    <Image Include="res\LuaDoc.ico" />
+    <Image Include="res\Messages.ico" />
+    <Image Include="res\Minus.bmp" />
+    <Image Include="res\Monitor.bmp" />
+    <Image Include="res\Monitor1.bmp" />
+    <Image Include="res\Monitor2.bmp" />
+    <Image Include="res\Monitor3.bmp" />
+    <Image Include="res\Monitor4.bmp" />
+    <Image Include="res\mp_channel.bmp" />
+    <Image Include="res\mp_channel_active.bmp" />
+    <Image Include="res\mp_thumb.bmp" />
+    <Image Include="res\mp_thumb_active.bmp" />
+    <Image Include="res\OptionOsc.bmp" />
+    <Image Include="res\OptionOscPressed.bmp" />
+    <Image Include="res\options.bmp" />
+    <Image Include="res\Orange.png" />
+    <Image Include="res\OscCursor.bmp" />
+    <Image Include="res\OscCursorPressed.bmp" />
+    <Image Include="res\OscLoad.bmp" />
+    <Image Include="res\OscLoadPressed.bmp" />
+    <Image Include="res\OscPrint.bmp" />
+    <Image Include="res\OscPrintPressed.bmp" />
+    <Image Include="res\OutputOff.bmp" />
+    <Image Include="res\OutputOn.bmp" />
+    <Image Include="res\PaneProperties.bmp" />
+    <Image Include="res\ParParametriche.bmp" />
+    <Image Include="res\ParTestine.bmp" />
+    <Image Include="res\ParUtensili.bmp" />
+    <Image Include="res\Plus.bmp" />
+    <Image Include="res\Quota.bmp" />
+    <Image Include="res\Regime.bmp" />
+    <Image Include="res\SampleSym.bmp" />
+    <Image Include="res\SaveOsc.bmp" />
+    <Image Include="res\SaveOscPressed.bmp" />
+    <Image Include="res\scheda1.bmp" />
+    <Image Include="res\SelectAdapter.bmp" />
+    <Image Include="res\SelectLibrary.bmp" />
+    <Image Include="res\sesta322.ico" />
+    <Image Include="res\SettingsOsc.bmp" />
+    <Image Include="res\SettingsOscPressed.bmp" />
+    <Image Include="res\SevenSegment.bmp" />
+    <Image Include="res\short_mp_channel.bmp" />
+    <Image Include="res\short_mp_channel_active.bmp" />
+    <Image Include="res\short_mp_thumb.bmp" />
+    <Image Include="res\short_mp_thumb_active.bmp" />
+    <Image Include="res\showglob.bmp" />
+    <Image Include="res\showmod.bmp" />
+    <Image Include="res\SlideBar.bmp" />
+    <Image Include="res\slotstat.bmp" />
+    <Image Include="res\SpecialLedMask.bmp" />
+    <Image Include="res\SpecialLedOff.bmp" />
+    <Image Include="res\SpecialLedOn.bmp" />
+    <Image Include="res\SpiaLoopClose.bmp" />
+    <Image Include="res\SpiaLoopOpen.bmp" />
+    <Image Include="res\StartOsc.bmp" />
+    <Image Include="res\StartOscPressed.bmp" />
+    <Image Include="res\StartOscPT.bmp" />
+    <Image Include="res\StartOscPTPressed.bmp" />
+    <Image Include="res\StartOscTriggered.bmp" />
+    <Image Include="res\StartOscTriggeredPressed.bmp" />
+    <Image Include="res\Stop.bmp" />
+    <Image Include="res\StopOsc.bmp" />
+    <Image Include="res\StopOscPressed.bmp" />
+    <Image Include="res\TabErrors.bmp" />
+    <Image Include="res\TaskBreaked.bmp" />
+    <Image Include="res\TaskDeath.bmp" />
+    <Image Include="res\taskrun.bmp" />
+    <Image Include="res\Telecomando.bmp" />
+    <Image Include="res\Temple 01.ico" />
+    <Image Include="res\TentativiDiMotta\Monitor1.bmp" />
+    <Image Include="res\test.bmp" />
+    <Image Include="res\TestIcon.ico" />
+    <Image Include="res\ThyraAbout.bmp" />
+    <Image Include="res\ThyraSplash.bmp" />
+    <Image Include="res\TipoDispositivo.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\ToolbarBrowse.bmp" />
+    <Image Include="res\ToolBarBuild.bmp" />
+    <Image Include="res\ToolBarCanOpen.bmp" />
+    <Image Include="res\ToolBarConf.bmp" />
+    <Image Include="res\ToolBarConfDevices.bmp" />
+    <Image Include="res\ToolBarConfHW.bmp" />
+    <Image Include="res\ToolBarDebug.bmp" />
+    <Image Include="res\ToolBarDiagnostic.bmp" />
+    <Image Include="res\ToolbarEdit.bmp" />
+    <Image Include="res\ToolBarEthercat.bmp" />
+    <Image Include="res\ToolBarMessages.bmp" />
+    <Image Include="res\ToolbarModules.bmp" />
+    <Image Include="res\ToolBarOsc.bmp" />
+    <Image Include="res\ToolBarPlc.bmp" />
+    <Image Include="res\ToolbarResources.bmp" />
+    <Image Include="res\ToolbarResourcesControls.bmp" />
+    <Image Include="res\ToolbarResourcesFormat.bmp" />
+    <Image Include="res\ToolbarResourcesTools.bmp" />
+    <Image Include="res\toolbarSize.bmp" />
+    <Image Include="res\ToolBarSSCNET.bmp" />
+    <Image Include="res\ToolBarViewErrors.bmp" />
+    <Image Include="res\toolbar_.bmp" />
+    <Image Include="res\toolbar_view.bmp" />
+    <Image Include="res\TriggerSym.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAdamoSink.rgs" />
+    <None Include="Debug\CncInterface.tli" />
+    <None Include="Ide2.rgs" />
+    <None Include="resource.hm" />
+    <None Include="res\cursor1.cur" />
+    <None Include="res\html_non.htm" />
+    <None Include="res\ide2.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Thira.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\compiler\compiler.vcxproj">
+      <Project>{c6dcdb18-f814-4e1b-a75e-0f0973b97948}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\core\core.vcxproj">
+      <Project>{08b3b9a4-4a09-402b-8f27-d426dbfd30f8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\GridCtrl\GridCtrl.vcxproj">
+      <Project>{e21b86b0-b961-4506-a975-d4471842a56d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libapi\libapi.vcxproj">
+      <Project>{d706050e-4de7-4816-aaa9-04a8d114081c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\scintilla\SciLexer.vcxproj">
+      <Project>{f1d9bfa4-20e1-40f6-9d2b-d73c0b3b33dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\standard\standard.vcxproj">
+      <Project>{eb9a25a2-7985-4674-866b-603cc4adfdcf}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\stdlib\stdlib.vcxproj">
+      <Project>{a079e038-8093-4e54-8776-79f391eda492}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties _x007B_C5412DD5-2E2F-11D3-85BF-00105AC8B715_x007D_="CiAngularGaugeX" _x007B_C5412DE7-2E2F-11D3-85BF-00105AC8B715_x007D_="CiLinearGaugeX" _x007B_C5412E33-2E2F-11D3-85BF-00105AC8B715_x007D_="CiSevenSegmentAnalogX" _x007B_EBF31E97-980B-4C2B-9645-8FEBD518356B_x007D_="CiLabelX" RESOURCE_FILE="ide2.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

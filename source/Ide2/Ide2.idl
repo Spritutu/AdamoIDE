@@ -1,0 +1,37 @@
+
+	// Ide2.idl : IDL source for Ide2.exe
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (Ide2.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(2131DAEB-CA2D-4B50-AF37-DA933B09F854),
+		dual,
+		helpstring("ICAdamoSink Interface"),
+		pointer_default(unique)
+	]
+	interface ICAdamoSink : IDispatch
+	{
+	};
+[
+	uuid(C178E1F2-FFF7-4394-8E36-5352628CF69E),
+	version(1.0),
+	helpstring("Ide2 1.0 Type Library")
+]
+library Ide2Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	[
+		uuid(B0B29B8E-9B89-4FA5-85BF-CF4A703572DC),
+		helpstring("CAdamoSink Class")
+	]
+	coclass CAdamoSink
+	{
+		[default] interface ICAdamoSink;
+	};
+};
+
+	

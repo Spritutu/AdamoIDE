@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{0113162F-0F88-41D3-BFBC-5A4FB7D6D7FF} = s 'Ide2'
+		'Ide2.EXE'
+		{
+			val AppID = s {0113162F-0F88-41D3-BFBC-5A4FB7D6D7FF}
+		}
+	}
+}
