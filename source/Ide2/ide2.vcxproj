@@ -46,7 +46,7 @@
     <_ProjectFileVersion>16.0.30028.132</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\..\..\executable\Release\</OutDir>
+    <OutDir>d:\sviluppo\adamo\adamobin\</OutDir>
     <IntDir>.\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>C:\Program Files %28x86%29\Codejock Software\MFC\Xtreme ToolkitPro v19.1.0\Source;$(IncludePath)</IncludePath>
@@ -95,8 +95,8 @@
       <AdditionalIncludeDirectories>C:\PROGRAM FILES\CODEJOCK SOFTWARE\MFC\TOOLKITPRO\INCLUDE;..\..\include\ide;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>core.lib;standard.lib;shlwapi.lib;gridctrl.lib;mpr.lib;lexxer.lib;ThiraImageLib.lib;AdamoLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\..\..\AdamoBin\Thira.exe</OutputFile>
+      <AdditionalDependencies>core.lib;standard.lib;shlwapi.lib;gridctrl.lib;mpr.lib;lexxer.lib;ThiraImageLib.lib;AdamoLib.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>d:\sviluppo\adamo\adamobin\$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\library\release;..\..\..\AdamoCNC\bin\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>.\..\..\executable\Release/Thira.pdb</ProgramDatabaseFile>
@@ -145,7 +145,7 @@
       <AdditionalIncludeDirectories>C:\Codejock Software\MFC\Xtreme ToolkitPro v11.2.2\Source; ..\..\include\ide;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>core.lib;standard.lib;gridctrld.lib;lexxer.lib;adamolib.lib;ThiraImageLib.lib;mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>core.lib;standard.lib;gridctrld.lib;lexxer.lib;adamolib.lib;ThiraImageLib.lib;mpr.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>d:\sviluppo\adamo\adamobin\$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\library\debug;..\..\..\AdamoCNC\bin\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -833,6 +833,7 @@
     <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoLoopChiuso.bmp" />
     <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoMeno.bmp" />
     <Image Include="..\..\..\..\Garbage\ButTemplates\ButStrettoPremutoPiu.bmp" />
+    <Image Include="RES\AboutExact.bmp" />
     <Image Include="res\Accelerazione.bmp" />
     <Image Include="res\AdaDoc.ico" />
     <Image Include="res\Alarm.ico" />
@@ -1100,6 +1101,7 @@
     <Image Include="res\SpecialLedOn.bmp" />
     <Image Include="res\SpiaLoopClose.bmp" />
     <Image Include="res\SpiaLoopOpen.bmp" />
+    <Image Include="RES\SplashScreenExact.bmp" />
     <Image Include="res\StartOsc.bmp" />
     <Image Include="res\StartOscPressed.bmp" />
     <Image Include="res\StartOscPT.bmp" />

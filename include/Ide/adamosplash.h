@@ -6,6 +6,7 @@
 #endif // _MSC_VER > 1000
 // AdamoSplash.h : header file
 //
+#define DIMENSIONE_SPLASH 750
 
 /////////////////////////////////////////////////////////////////////////////
 // CAdamoSplash dialog
@@ -36,11 +37,17 @@ protected:
 	//{{AFX_MSG(CAdamoSplash)
 	virtual BOOL OnInitDialog();
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 private :
+	void InitVersionLabel();
+private :
     CBrush m_bkg;
-    CRgn   m_rgn;
+	CLabel m_ctlVersion;
+	double m_fpSizeX;
+	double m_fpSizeY;
+	bool m_bInitialized;
 };
 
 //{{AFX_INSERT_LOCATION}}

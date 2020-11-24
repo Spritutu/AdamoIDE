@@ -22,6 +22,16 @@ public:
 	CTransparentStatic	m_stProductID;
 	CTransparentStatic	m_stProductVersion;
 	CTransparentStatic	m_stProductCompany;
+	CTransparentStatic	m_stRightsReserved;
+	CTransparentStatic	m_stKinemaSuite;
+	CTransparentStatic	m_stCommInterface;
+	CTransparentStatic	m_stCommModule;
+	CTransparentStatic	m_stTranslationModule;
+	CTransparentStatic	m_stFirmware;
+	CTransparentStatic	m_stCommInterfaceVer;
+	CTransparentStatic	m_stCommModuleVer;
+	CTransparentStatic	m_stTranslationModuleVer;
+	CTransparentStatic	m_stFirmwareVer;
 	//}}AFX_DATA
 
 
@@ -43,9 +53,15 @@ protected:
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 private :
+	void InitVersionLabel();
+	void InitCommInterfaceLabel();
+	void InitCommModuleLabel();
+	void InitTranslationModuleLabel();
+	void InitFirmwareLabel();
+private :
     CBrush  m_bkg;
-    CRgn    m_rgn;
     CFont*  m_fnt;
+	CFont*  m_fntBig;
 };
 
 //{{AFX_INSERT_LOCATION}}

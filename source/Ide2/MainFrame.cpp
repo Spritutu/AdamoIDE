@@ -7435,6 +7435,24 @@ void CMainFrame::GestioneStringa (stThiraStringElement* p)
 	m_wndStatusBar.ShowMessage ();
 }
 
+void CMainFrame::ResizeBitmap(CBitmap& bmp_src, CBitmap& bmp_dst, int dstW, int dstH)
+{
+    BITMAP bm = { 0 };
+    bmp_src.GetBitmap(&bm);
+    auto size = CSize(bm.bmWidth, bm.bmHeight);
+    CWindowDC wndDC(NULL);
+    CDC srcDC;
+    srcDC.CreateCompatibleDC(&wndDC);
+    auto oldSrcBmp = srcDC.SelectObject(&bmp_src);
+
+    CDC destDC;
+    destDC.CreateCompatibleDC(&wndDC);
+    bmp_dst.CreateCompatibleBitmap(&wndDC, dstW, dstH);
+    auto oldDestBmp = destDC.SelectObject(&bmp_dst);
+
+    destDC.StretchBlt(0, 0, dstW, dstH, &srcDC, 0, 0, size.cx, size.cy, SRCCOPY);
+}
+
 void CMainFrame::GestioneCancellazioneStringa (stThiraStringElement* p)
 {
 }
@@ -7478,4 +7496,34 @@ CXTPTabManagerItem* CAdamoXTPTabClientWnd::AddItem (CWnd* pChildWnd)
 	if (pChildWnd->IsKindOf(RUNTIME_CLASS(CLuaFrame)))
 		pTabItem = __super::AddItem (pChildWnd);
 	return pTabItem;
+}
+
+int CMainFrame::GetFileVersion(CPath pFilePath, VERSION* pRetVersion)
+{
+    DWORD               dwSize = 0;
+    BYTE* pVersionInfo = NULL;
+    VS_FIXEDFILEINFO* pFileInfo = NULL;
+    UINT                pLenFileInfo = 0;
+
+    /*getting the file version info size */
+    dwSize = GetFileVersionInfoSize(pFilePath, NULL);
+    if (dwSize == 0)
+        return -1;
+    pVersionInfo = new BYTE[dwSize]; /*allocation of space for the verison size */
+    if (!GetFileVersionInfo(pFilePath, 0, dwSize, pVersionInfo)) {/*entering all info     data to pbVersionInfo*/
+        delete[] pVersionInfo;
+        return -1;
+    }
+    if (!VerQueryValue(pVersionInfo, TEXT("\\"), (LPVOID*)&pFileInfo, &pLenFileInfo)) {
+        delete[] pVersionInfo;
+        return -1;
+    }
+    /*checking if the allocation succeeded */
+    if (NULL == pRetVersion)
+        return -1;
+    pRetVersion->major = (pFileInfo->dwFileVersionMS >> 16) & 0xffff;
+    pRetVersion->minor = (pFileInfo->dwFileVersionMS) & 0xffff;
+    pRetVersion->hotfix = (pFileInfo->dwFileVersionLS >> 16) & 0xffff;
+    pRetVersion->other = (pFileInfo->dwFileVersionLS) & 0xffff;
+    return 0;
 }

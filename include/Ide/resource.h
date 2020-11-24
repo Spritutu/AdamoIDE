@@ -2129,6 +2129,7 @@
 #define IDS_ADAMOVIEWREFERENCES_1       1342
 #define IDC_STATIC_FRAME                1343
 #define IDS_ADAMOVIEWREFERENCES_2       1343
+#define IDC_ST_RIGHTS_RESERVED          1343
 #define ID_BTN_CLOSEDIALOG              1344
 #define IDS_ADAMOGRIDVIEW_178           1344
 #define IDC_FLAT_DG_TABCTRL             1345
@@ -2556,6 +2557,16 @@
 #define IDC_ST_LOOP_CHIUSO              1648
 #define IDC_AXSETTINGS_REPORT           1652
 #define IDC_ILEDBAREA                   1653
+#define IDC_ST_SPASH_VERSION            1655
+#define IDC_ST_KINEMASUITE              1656
+#define IDC_ST_COMMUNICATIOMODULE       1657
+#define IDC_ST_TRANSLATIONMODULE        1658
+#define IDC_ST_FIRMWARE                 1659
+#define IDC_ST_COMMUNICATIONINTERFACE    1660
+#define IDC_ST_CIVER                    1661
+#define IDC_ST_CMVER                    1662
+#define IDC_ST_TMVER                    1663
+#define IDC_ST_FWVER                    1664
 #define ID_PROJECT_ADD_FILES            32771
 #define ID_MESSAGES_NEW                 32772
 #define ID_MESSAGES_MODIFY              32773
@@ -2842,9 +2853,9 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        1415
+#define _APS_NEXT_RESOURCE_VALUE        1422
 #define _APS_NEXT_COMMAND_VALUE         33221
-#define _APS_NEXT_CONTROL_VALUE         1654
+#define _APS_NEXT_CONTROL_VALUE         1662
 #define _APS_NEXT_SYMED_VALUE           123
 #endif
 #endif

@@ -2847,6 +2847,12 @@
     <Image Include="res\bmp00042.bmp">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="RES\SplashScreenExact.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\AboutExact.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <None Include="CAdamoSink.rgs">

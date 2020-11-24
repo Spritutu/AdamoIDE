@@ -100,7 +100,12 @@ class CAdamoXTPTabClientWnd : public CXTPTabClientWnd   {
 		CXTPTabManagerItem* AddItem (CWnd* pChildWnd);
 };
 
-int GetStringaCodiceDatiAsse (int n);
+struct VERSION {
+	DWORD major;
+	DWORD minor;
+	DWORD hotfix;
+	DWORD other;
+};
 
 class CMainFrame : public CXTPMDIFrameWnd, CXTPCommandBarsFrameHook
 {
@@ -340,6 +345,8 @@ public:
 	void SetSkin (CString& strSkin);
 	void LoadSkin ();
 	CString ChainMachineError (char *pErr);
+	void ResizeBitmap(CBitmap& bmp_src, CBitmap& bmp_dst, int dstW, int dstH);
+	int GetFileVersion(CPath pFilePath, VERSION* pRetVersion);
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
