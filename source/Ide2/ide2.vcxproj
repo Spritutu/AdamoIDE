@@ -1000,6 +1000,8 @@
     <Image Include="res\DeviceGroup.bmp" />
     <Image Include="res\Disco.bmp" />
     <Image Include="res\Dispositivo.bmp" />
+    <Image Include="RES\ExactApp.ico" />
+    <Image Include="res\ExactMottaApp.ico" />
     <Image Include="res\eyeblue.bmp" />
     <Image Include="res\eyecl2.bmp" />
     <Image Include="res\eyeclosed.bmp" />

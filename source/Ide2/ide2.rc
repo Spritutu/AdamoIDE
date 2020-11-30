@@ -1472,13 +1472,13 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "CompanyName", "Kinema"
-            VALUE "FileDescription", "Controllo Numerico Kinema AST"
+            VALUE "CompanyName", "Kinema CNC"
+            VALUE "FileDescription", "Controllo Numerico Kinema CNC"
             VALUE "FileVersion", "3, 0, 0, 0"
             VALUE "InternalName", "CNC"
-            VALUE "LegalCopyright", "Copyright (C) 2007"
-            VALUE "OriginalFilename", "Thira.exe"
-            VALUE "ProductName", "IDE Application"
+            VALUE "LegalCopyright", "Copyright (C) 2020"
+            VALUE "OriginalFilename", "Exact.exe"
+            VALUE "ProductName", "Exact CNC"
             VALUE "ProductVersion", "3, 0, 0, 0"
         END
     END
@@ -4013,7 +4013,7 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_MAINFRAME           ICON                    "..\\IDE2\\RES\\sesta322.ico"
+IDR_MAINFRAME           ICON                    "..\\IDE2\\RES\\ExactMottaApp.ico"
 
 IDR_MENU_CONFIG         ICON                    "..\\IDE2\\RES\\icon1.ico"
 
