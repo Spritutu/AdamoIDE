@@ -125,7 +125,7 @@ void CDlgHWEthercatNet::OnSize(UINT nType, int cx, int cy)
 	
 	// TODO: Add your message handler code here
     if (m_bInitialized)   {
-		m_grid.MoveWindow (10, 50, cx-20, 21*19+5);		
+		m_grid.MoveWindow (10, 50, cx-20, 21*19 - 2);		
 		m_grid.SetColumnWidth (1, 300);
 		m_grid.ExpandLastColumn ();
 	}

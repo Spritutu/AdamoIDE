@@ -63,7 +63,11 @@ protected:
         void SetConfigDoc ();
         void SaveData ();
         void InitPsw ();
-    private :
+		void OnOK() {
+		}
+		void OnCancel() {
+		}
+private :
 		CProject       *m_pPrj;
         CParsedEdit     m_editSDOTimeot;
         CParsedEdit     m_editSync;

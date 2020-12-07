@@ -96,6 +96,10 @@ private :
 	void ClearSlaveInfo (int nIndex);
 	void InitPsw ();
 	void SetConfigDoc ();
+	void OnOK() {
+	}
+	void OnCancel() {
+	}
 public:
 	afx_msg void OnBnClickedCheckContinousMeasuring();
 };

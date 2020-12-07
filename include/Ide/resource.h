@@ -1437,6 +1437,7 @@
 #define IDC_BTN_DELETE_LIBRARY          1031
 #define IDC_BTN_ADDTOLIBRARY            1031
 #define IDC_BTN_ADD_TO_PROJECT          1031
+#define IDC_BTN_SELECT_ALL              1031
 #define IDC_BTNFIND                     1032
 #define IDC_BTN_DEBUG_WRITE_2           1032
 #define IDS_ADAMORSPROPERTIES_87        1032
@@ -2284,8 +2285,11 @@
 #define IDC_EDIT_SYNCFREQUENCY          1415
 #define IDS_ADAMO_AXIS_STATUS_22        1415
 #define IDC_EDIT_TIMEOUTSDO             1416
+#define IDS_ADAMOPROJECT_11             1416
 #define IDC_ST_SYNC                     1417
+#define IDS_EC_SELECT_ALL               1417
 #define IDC_ST_TIMEOUTSDO               1418
+#define IDS_EC_UNSELECT_ALL             1418
 #define IDC_RADIO_BAUDRATE125           1419
 #define IDB_BMP_SELSYMBOLS              1419
 #define IDC_RADIO_BAUDRATE250           1420
@@ -2557,7 +2561,7 @@
 #define IDC_ST_LOOP_CHIUSO              1648
 #define IDC_AXSETTINGS_REPORT           1652
 #define IDC_ILEDBAREA                   1653
-#define IDC_ST_SPASH_VERSION            1655
+#define IDC_ST_SPLASH_VERSION            1655
 #define IDC_ST_KINEMASUITE              1656
 #define IDC_ST_COMMUNICATIOMODULE       1657
 #define IDC_ST_TRANSLATIONMODULE        1658
@@ -2853,7 +2857,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        1422
+#define _APS_NEXT_RESOURCE_VALUE        1424
 #define _APS_NEXT_COMMAND_VALUE         33221
 #define _APS_NEXT_CONTROL_VALUE         1662
 #define _APS_NEXT_SYMED_VALUE           123

@@ -29,6 +29,7 @@ public:
 	CButton	m_ctrlTabType;
 	CListCtrl	m_ctrlVarEnable;
 	CButton	m_ctrlTabEnable;
+	CButton	m_ctrlSelectAll;
 	//}}AFX_DATA
 
 
@@ -49,6 +50,7 @@ protected:
 	afx_msg void OnEcTabAssi();
 	afx_msg void OnEcTabIo();
 	afx_msg void OnEcTabIoanag();
+	afx_msg void OnBtnSelectAll();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 private :
@@ -60,6 +62,7 @@ private :
 	CProject		*m_pPrj;
 	int m_nTab;
 	CImageList m_iIcons;
+	bool m_bSelectAll;
 };
 
 //{{AFX_INSERT_LOCATION}}

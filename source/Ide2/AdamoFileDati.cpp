@@ -1556,7 +1556,7 @@ void CAdamoHWConfigFile::WriteEthercatData (CStdioFile *pXMLFile)
 	pXMLFile->WriteString (str);
 	str.Format ("<HPEDriver>%s</HPEDriver>\n", m_HWConf.m_HWEthercatNet2.strHpeDriver);
 	pXMLFile->WriteString (str);
-	str.Format ("<OffsetDCTiming>%I64d</OffsetDCTiming>\n", m_HWConf.m_HWEthercatNet2.m_nOffsetDCTiming);
+	str.Format ("<OffsetDCTiming>%d</OffsetDCTiming>\n", m_HWConf.m_HWEthercatNet2.m_nOffsetDCTiming);
 	pXMLFile->WriteString (str);
 	for (int i=0; i<NMAXAXIS; i++)   {
 		str.Format ("<Axis_%d>\n", i);

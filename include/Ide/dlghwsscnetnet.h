@@ -56,6 +56,10 @@ private :
     void InitData ();
     void SaveData ();
     void InitPsw ();
+	void OnOK() {
+	}
+	void OnCancel() {
+	}
 private :
     CConfigDoc     *m_pConfigDoc;
     CSSCNETConf     m_stSSCNETConf;

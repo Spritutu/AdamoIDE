@@ -59,6 +59,10 @@ private :
 	void CreateTab ();
 	void SetConfigDoc ();
 	eEthercatDeviceType GetDeviceType (int nIndex);
+	void OnOK() {
+	}
+	void OnCancel() {
+	}
 };
 
 //{{AFX_INSERT_LOCATION}}

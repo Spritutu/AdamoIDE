@@ -55,7 +55,7 @@ BOOL CDlgEcConfigSlaves::OnInitDialog()
 	
 	// TODO: Add extra initialization here
 	CreateTab ();
-	m_bInitialized=true;	
+	m_bInitialized=true;
 	return TRUE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE
 }
@@ -68,7 +68,7 @@ void CDlgEcConfigSlaves::CreateTab ()
     RECT rc;
 
     memset (&rc, 0, sizeof (RECT));
-	rc.bottom=100; rc.left=20; rc.right=500; rc.top=20;
+	rc.bottom=300; rc.left=20; rc.right=800; rc.top=20;
 	m_pFlatTabCtrl = new CXTFlatTabCtrl();
 	if (m_pFlatTabCtrl->Create(WS_CHILD | WS_VISIBLE | FTS_XT_BOTTOM | FTS_XT_TOOLTIPS,
 		&rc, this, IDC_FLAT_TABCTRL))   {
@@ -121,7 +121,7 @@ void CDlgEcConfigSlaves::OnSize(UINT nType, int cx, int cy)
 	
 	// TODO: Add your message handler code here
 	if (m_bInitialized)
-        m_pFlatTabCtrl->MoveWindow (10, 10, cx-20, cy-40);
+		m_pFlatTabCtrl->MoveWindow(10, 10, cx - 20, cy - 40);
 }
 
 /*

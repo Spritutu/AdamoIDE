@@ -17,7 +17,7 @@ static char THIS_FILE[] = __FILE__;
 
 
 CDlgEcConfigSingleSlave::CDlgEcConfigSingleSlave(CWnd* pParent /*=NULL*/)
-	: CDialog(CDlgEcConfigSingleSlave::IDD, pParent), m_pEcSlave (NULL), m_nTab (-1), m_pPrj (NULL)
+	: CDialog(CDlgEcConfigSingleSlave::IDD, pParent), m_pEcSlave (NULL), m_nTab (-1), m_pPrj (NULL), m_bSelectAll (false)
 {
 	//{{AFX_DATA_INIT(CDlgEcConfigSingleSlave)
 		// NOTE: the ClassWizard will add member initialization here
@@ -35,6 +35,7 @@ void CDlgEcConfigSingleSlave::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_EC_TAB_TYPE, m_ctrlTabType);
 	DDX_Control(pDX, IDC_EC_VAR_ENABLE, m_ctrlVarEnable);
 	DDX_Control(pDX, IDC_TAB_ENABLE, m_ctrlTabEnable);
+	DDX_Control(pDX, IDC_BTN_SELECT_ALL, m_ctrlSelectAll);
 	//}}AFX_DATA_MAP
 }
 
@@ -45,6 +46,7 @@ BEGIN_MESSAGE_MAP(CDlgEcConfigSingleSlave, CDialog)
 	ON_BN_CLICKED(IDC_EC_TAB_ASSI, OnEcTabAssi)
 	ON_BN_CLICKED(IDC_EC_TAB_IO, OnEcTabIo)
 	ON_BN_CLICKED(IDC_EC_TAB_IOANAG, OnEcTabIoanag)
+	ON_BN_CLICKED(IDC_BTN_SELECT_ALL, OnBtnSelectAll)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -77,6 +79,7 @@ void CDlgEcConfigSingleSlave::InitStrings ()
 	m_ctrlRadioIO.SetWindowText (LOADSTRING (IDS_EC_TAB_IO));
 	m_ctrlRadioIOAnag.SetWindowText (LOADSTRING (IDS_EC_TAB_IOANAG));
 	m_ctrlTabType.SetWindowText (LOADSTRING (IDS_EC_TAB_TABTYPE));
+	m_ctrlSelectAll.SetWindowText(LOADSTRING(IDS_EC_SELECT_ALL));
 }
 
 /*
@@ -259,4 +262,15 @@ void CDlgEcConfigSingleSlave::OnEcTabIoanag()
 {
 	// TODO: Add your control notification handler code here
 	GetParent ()->GetParent ()->SendMessage (WM_EC_ENABLE_TAB, 1, MAKELONG ((WORD)m_nTab, eEthIOAnalogic));	
+}
+
+/*
+** OnBtnChooseJpg :
+*/
+void CDlgEcConfigSingleSlave::OnBtnSelectAll()
+{
+	m_bSelectAll = !m_bSelectAll;
+	for (int nItem = 0; nItem < m_ctrlVarEnable.GetItemCount(); nItem++)
+		m_ctrlVarEnable.SetCheck(nItem, m_bSelectAll);
+	m_ctrlSelectAll.SetWindowTextA (LOADSTRING(m_bSelectAll ? IDS_EC_UNSELECT_ALL : IDS_EC_SELECT_ALL));
 }

@@ -261,19 +261,19 @@ void CAdamoEthercatIOAnalogico::OnSize(UINT nType, int cx, int cy)
 
     if (m_bInitialized)   {
         m_stInpAnag.MoveWindow (10, 2, 100, 16);
-	    m_GridInpAna.MoveWindow (10, 18, cx-20, 13*19+5);
-        m_stOutAnag.MoveWindow (10, 272, 100, 16);
-	    m_GridOutAna.MoveWindow (10, 288, cx-20, 13*19+5);
+	    m_GridInpAna.MoveWindow (10, 18, cx-20, 13*22+4);
+        m_stOutAnag.MoveWindow (10, 334, 100, 16);
+	    m_GridOutAna.MoveWindow (10, 350, cx-20, 13*22+4);
         m_GridInpAna.SetColumnWidth (0, 50);
         m_GridOutAna.SetColumnWidth (0, 50);
 		m_GridInpAna.SetColumnWidth (1, 100);
         m_GridOutAna.SetColumnWidth (1, 100);
-		m_GridInpAna.SetColumnWidth (2, 250);
-        m_GridOutAna.SetColumnWidth (2, 250);
-		m_GridInpAna.SetColumnWidth (3, 350);
-        m_GridOutAna.SetColumnWidth (3, 350);
-		m_GridInpAna.SetColumnWidth (4, 100);
-        m_GridOutAna.SetColumnWidth (4, 100);
+		m_GridInpAna.SetColumnWidth (2, 224);
+        m_GridOutAna.SetColumnWidth (2, 224);
+		m_GridInpAna.SetColumnWidth (3, 300);
+        m_GridOutAna.SetColumnWidth (3, 300);
+		m_GridInpAna.SetColumnWidth (4, 80);
+        m_GridOutAna.SetColumnWidth (4, 80);
         m_GridInpAna.ExpandLastColumn ();
         m_GridOutAna.ExpandLastColumn ();
     }

@@ -218,7 +218,7 @@ void CAdamoEthercatAssi::InitializeGridVariabili (CConfigHWGrid& m_Grid, int nID
     m_Grid.SetRowCount (nRow+1);
     m_Grid.SetEditable ();
     m_Grid.FillGridCaption ();
-    m_Grid.SetColumnResize (FALSE);
+	m_Grid.SetColumnResize(TRUE);
 	((CAdamoEthercatAssiGrid &)m_Grid).SetEthAssi (this);
 	if (nID==IDC_GRID_HW_VAR_INPUT)
 		m_Grid.SetItemText (0, 0, LOADSTRING (IDS_EC_GRID_ASSI_INPUT));
@@ -278,22 +278,20 @@ void CAdamoEthercatAssi::InitializeStrings ()
 	POSITION pos;
 	int i, n;
 
-	m_slVarInput.SetSize (1024);
 	i=0; n=0;
 	for (pos=m_pSlave->VariablesList.GetHeadPosition (); pos; n++)   {
 		stAdamoEthSlaveVariable *pVar=(stAdamoEthSlaveVariable *)m_pSlave->VariablesList.GetNext (pos);
 		if (pVar->nInputOutput==0)   {
 			if (m_pSlave->liEnableVariables[m_nTab].BitTest (n))
-				m_slVarInput[i++]=pVar->szName;
+				m_slVarInput.Add (pVar->szName);
 		}
 	}
-	m_slVarOutput.SetSize (1024);
 	i=0; n=0;
 	for (pos=m_pSlave->VariablesList.GetHeadPosition (); pos; n++)   {
 		stAdamoEthSlaveVariable *pVar=(stAdamoEthSlaveVariable *)m_pSlave->VariablesList.GetNext (pos);
 		if (pVar->nInputOutput==1)
 			if (m_pSlave->liEnableVariables[m_nTab].BitTest (n))
-				m_slVarOutput[i++]=pVar->szName;
+				m_slVarOutput.Add (pVar->szName);
 	}
 }
 
@@ -307,24 +305,24 @@ void CAdamoEthercatAssi::OnSize(UINT nType, int cx, int cy)
 	// TODO: Add your message handler code here
     if (m_bInitialized)   {
         m_stAssi.MoveWindow (10, 2, 100, 16);
-	    m_GridAssi.MoveWindow (10, 16, cx-20, 9*19+5);
+	    m_GridAssi.MoveWindow (10, 16, cx-20, 9*22+4);
         m_GridAssi.SetColumnWidth (0, 50);
         m_GridAssi.SetColumnWidth (1, 200);
         m_GridAssi.ExpandLastColumn ();
-		int n=(cx-20-50)/8;
+		int n=(cx-20-50)/12;
 		if (n>0)   {
-			m_GridVarInput.MoveWindow (10, 194, cx-20, 9*19+5);
-			m_GridVarInput.SetColumnWidth (0, 50);
-			m_GridVarInput.SetColumnWidth (1, n*2);
+			m_GridVarInput.MoveWindow (10, 230, cx-20, 9*22+4);
+			m_GridVarInput.SetColumnWidth (0, 48);
+			m_GridVarInput.SetColumnWidth (1, n*5);
 			m_GridVarInput.SetColumnWidth (2, n);
-			m_GridVarInput.SetColumnWidth (3, n*2);
-			m_GridVarInput.ExpandLastColumn ();
-			m_GridVarOutput.MoveWindow (10, 372, cx-20, 9*19+5);
-			m_GridVarOutput.SetColumnWidth (0, 50);
-			m_GridVarOutput.SetColumnWidth (1, n*2);
-			m_GridVarOutput.SetColumnWidth (2, n);
-			m_GridVarOutput.SetColumnWidth (3, n*2);
-			m_GridVarOutput.ExpandLastColumn ();
+			m_GridVarInput.SetColumnWidth (3, n*5);
+			m_GridVarInput.SetColumnWidth (4, n);
+			m_GridVarOutput.MoveWindow (10, 444, cx-20, 9*22+4);
+			m_GridVarOutput.SetColumnWidth(0, 48);
+			m_GridVarOutput.SetColumnWidth(1, n * 5);
+			m_GridVarOutput.SetColumnWidth(2, n);
+			m_GridVarOutput.SetColumnWidth(3, n * 5);
+			m_GridVarOutput.SetColumnWidth(4, n);
 		}
     }
 }

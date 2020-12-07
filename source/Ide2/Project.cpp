@@ -435,44 +435,48 @@ BOOL CProject::Load(CString strPathName, int nModule)
 			((CAdamoCfgMachine*)m_objMachine)->SetAdamoOptions (((CIdeApp*)AfxGetApp ())->GetAdamoOptions ());
             /* caricamento della configurazione */
 	        CArchive ar(&fin, CArchive::load);
-	        nB = LoadProjectData (ar);
-            ar.Close ();
-            fin.Close ();
-            /* verifica di file e directory */
-            SetIsModified (false);
-	        UpdateDirectories();
-            CheckFiles ();
-			/* apriamo la configurazione hw */
-			LoadHWConfig ();
-            /* settiamo il preprocessore */
-	        m_ppr.SetAdamoMachine (m_objMachine);
-            m_ppr.SetTraduzioniObj (&m_tr);
-            /* variabili globali */
-            m_vc.SetProjectDirectory (GetProjectDir ());
-            m_vc.Load ();
-            /* browser */
-            m_bc.SetProjectDirectory (GetProjectDir ());
-            m_bc.Load ();
-            /* function native dictionary */
-            m_sc.Load ();
-            /* function custom dictionary */
-			m_fc.SetPath (GetProjectDir ());
-            m_fc.Load ();
-            /* Objects custom dictionary */
-			m_oc.SetPath (GetProjectDir ());
-            m_oc.Load ();
-			/* aggiorniamo la visualizzazione dei dati del progetto */
-            ((CMainFrame*)AfxGetMainWnd())->UpdateActiveProject();
-            /* Password level */
-            LoadPswLevel ();
-			/* ethercat */
-			LoadEthercatXMLFile ();
-            /* apriamo la macchina */
-            if (!OpenMachine ())
-				ErroreDiConnessione ();
-			/* aggiorniamo le docking bars */
-			((CMainFrame*)AfxGetMainWnd())->LoadDockingProject (this);
-        }
+			if (LoadProjectData(ar)) {
+				/* verifica di file e directory */
+				SetIsModified(false);
+				UpdateDirectories();
+				CheckFiles();
+				/* apriamo la configurazione hw */
+				LoadHWConfig();
+				/* settiamo il preprocessore */
+				m_ppr.SetAdamoMachine(m_objMachine);
+				m_ppr.SetTraduzioniObj(&m_tr);
+				/* variabili globali */
+				m_vc.SetProjectDirectory(GetProjectDir());
+				m_vc.Load();
+				/* browser */
+				m_bc.SetProjectDirectory(GetProjectDir());
+				m_bc.Load();
+				/* function native dictionary */
+				m_sc.Load();
+				/* function custom dictionary */
+				m_fc.SetPath(GetProjectDir());
+				m_fc.Load();
+				/* Objects custom dictionary */
+				m_oc.SetPath(GetProjectDir());
+				m_oc.Load();
+				/* aggiorniamo la visualizzazione dei dati del progetto */
+				((CMainFrame*)AfxGetMainWnd())->UpdateActiveProject();
+				/* Password level */
+				LoadPswLevel();
+				/* ethercat */
+				LoadEthercatXMLFile();
+				/* apriamo la macchina */
+				if (!OpenMachine())
+					ErroreDiConnessione();
+				/* aggiorniamo le docking bars */
+				((CMainFrame*)AfxGetMainWnd())->LoadDockingProject(this);
+				nB = TRUE;
+			}
+			else
+				nB = FALSE;
+			ar.Close();
+			fin.Close();
+		}
         else    {
 		    AfxMessageBox(LOADSTRING (IDS_ADAMOPROJECT_5));
 		    nB = FALSE;
@@ -483,10 +487,12 @@ BOOL CProject::Load(CString strPathName, int nModule)
 	return nB;
 }
 
-BOOL CProject::LoadConfigData (CString strPathName, CString strParamsPathName)
+bool CProject::LoadConfigData (CString strPathName, CString strParamsPathName)
 {
 	CFile fin;
     CFileException e;
+	bool b = false;
+
 	if (!_access (strPathName, 00))   {
 		if (!fin.Open(strPathName, CFile::modeRead|CFile::typeBinary|CFile::shareDenyNone,&e))   {
 			AfxMessageBox(LOADSTRING (IDS_ADAMOPROJECT_5));
@@ -498,17 +504,21 @@ BOOL CProject::LoadConfigData (CString strPathName, CString strParamsPathName)
 			((CAdamoCfgMachine*)m_objMachine)->GestisciMappaEId (strParamsPathName);
 			GestisciVersione ();
 			m_bIsMachineEmpty=((CAdamoCfgMachine*)m_objMachine)->IsLogicModuleEmpty();
+			b = true;
 		}
 		ar.Close ();
 		fin.Close ();
 	}
-    return TRUE;
+	else
+		AfxMessageBox(LOADSTRING(IDS_ADAMOPROJECT_5));
+	return b;
 }
 
-BOOL CProject::LoadProjectData (CArchive &ar)
+bool CProject::LoadProjectData (CArchive &ar)
 {
 	CString strHeaderFile;
     int nFiles, nFilesLoaded;
+	bool b = false;
 
     /* carichiamo le opzioni del progetto */
 	ar >> m_strPathName;
@@ -537,17 +547,17 @@ BOOL CProject::LoadProjectData (CArchive &ar)
     nFiles=nFilesLoaded;
 	/* carichiamo le librerie */
 	LoadLibraries (ar);
-    /* apriamo i file di lingua */
+	/* apriamo i file di lingua */
 	m_tr.PropagaMessaggio (m_bPropagateMessages != 0, false);
     if (!m_tr.ApriFileDiLingua (GetLanguagePathName (), 0))   {
         m_tr.CreaFileDiLingua (GetLanguagePathName ());
         m_tr.ApriFileDiLingua (GetLanguagePathName (), 0);
-    }
-    /* settiamo l'oggetto delle traduzioni nella macchina corrente */
-    ((CAdamoCfgMachine*)m_objMachine)->SetTraduzioniObj (&m_tr);
-    /* carichiamo la configurazione */
-    LoadConfigData (GetProjectDir()+"\\"+GetName()+".cfg", GetParamsPathName());
-	return TRUE;
+	}
+	/* settiamo l'oggetto delle traduzioni nella macchina corrente */
+	((CAdamoCfgMachine*)m_objMachine)->SetTraduzioniObj(&m_tr);
+	/* carichiamo la configurazione */
+	b = LoadConfigData(GetProjectDir() + "\\" + GetName() + ".cfg", GetParamsPathName());
+	return b;
 }
 
 BOOL CProject::Save()
@@ -1119,7 +1129,11 @@ void CProject::ReloadConfiguration ()
 {
     /* cancelliamo la configurazione di macchina */
     DeleteConfigData ();
-    /* ricarichiamo la configurazione */
+	/* apriamo la configurazione hw */
+	LoadHWConfig();
+	/* impostiamo il preprocessore */
+	m_ppr.SetAdamoMachine(m_objMachine);
+	/* ricarichiamo la configurazione */
     LoadConfigData (GetProjectDir()+"\\"+GetName()+".cfg", GetParamsPathName());
 }
 
@@ -1603,6 +1617,7 @@ void CProject::SaveHWConfig ()
         m_adf->WriteData();
         m_adf->CloseFile();
         CheckHWConfigFile (GetHWConfigPathName());
+		SaveConfigXML (GetProjectDir() + "\\" + GetName() + "_config.xml");
 		SaveHWConfigXML (GetProjectDir()+"\\"+"Hardware"+"_config.xml");
         if (m_hwcf->Open (GetHWConfigPathName(), TRUE))   {
             m_hwcf->WriteData ();
@@ -1721,6 +1736,8 @@ void CProject::ImportFromXml (CString strProjectDir, CString strIntermediateDir,
 	ImportCfgFile (strProjectDir, strName, "");
 	/* importiamo il file cfg */
 	ImportHWFile (strProjectDir, strName, "");
+	/* ricarichiamo la macchina */
+	RicaricaNuovaMacchina();
 }
 
 /*
@@ -1735,9 +1752,12 @@ void CProject::ImportFromFileXml (CString strProjectDir, CString strIntermediate
 	CString str = path.GetName ();
 	if (str.MakeLower () == "hardware_config.xml") 
 		ImportHWFile (strProjectDir, strName, strPath);
+
 	else
 	if (str == strCfgFileName) 
 		ImportCfgFile (strProjectDir, strName, strPath);
+	/* ricarichiamo la macchina */
+	RicaricaNuovaMacchina();
 }
 
 /*
@@ -1865,10 +1885,8 @@ void CProject::ParseCfgFile (DocXmlPtr pDocXml, CString strProjectDir, CString s
 				n++;
 			}
 		}
-		if (!bError)   {
+		if (!bError)
 			SalvaNuovaMacchina (pMachine, strProjectDir, strName);
-			RicaricaNuovaMacchina ();
-		}
 	}
 }
 
@@ -1924,7 +1942,7 @@ void CProject::ParseHWFile (DocXmlPtr pDocXml, CString strProjectDir, CString st
 			}
 		}
 		/* salviamo la configurazione */
-		SaveHWImportedFile (pHWConfigFile, strProjectDir, strName);
+		SaveHWImportedFile (pHWConfigFile);
 	}
 }
 
@@ -2202,12 +2220,17 @@ int CProject::IteraGruppo (ElementXmlPtr pEl, CAdamoCfgMachine *pMachine, CAdamo
 	int nItems;
     NodeListXmlPtr  pRootChild;
     CString str=(LPCTSTR)pEl->nodeName;
+	CPath strPathProject(strProjectDir + "\\" + DEVICE_FILE);
 
 	if (m_nLevel == 0)   {
 		pGroup = new CAdamoLogicModule;
 		pFileDati = new CAdamoDatiFile;
-		if (pFileDati->Open (strProjectDir + "\\" + DEVICE_FILE, 1) != 1)
-			return -1;
+		if (!_access(strPathProject, 00)) {
+			if (pFileDati->Open (strPathProject, 1) != 1)
+				return -1;
+		}
+		else
+			pFileDati->Open(strPathProject, 0);
 	}
 	else
 		pGroup = new CAdamoGroup;
@@ -2992,7 +3015,11 @@ int CProject::SalvaNuovaMacchina (CAdamoCfgMachine* pMachine, CString strProject
 */
 void CProject::RicaricaNuovaMacchina ()
 {
-	ReloadConfiguration ();
+	//ReloadConfiguration ();
+	CPath path = GetPathName();
+	int nModule = GetModuleNumber();
+	Close();
+	Load((const char*)path, nModule);
 }
 
 /*
@@ -3529,14 +3556,14 @@ int CProject::ImportHWSSCNET (ElementXmlPtr pEl, CAdamoHWConfigFile *pHWConfigFi
 				strEAE.Format ("EnableAbsoluteEncoder_Station%d", i+1);
 				if (str == strEAE)   {
 					bool bEAE = atoi (strText) != 0;
-					pHWConfigFile->GetSSCNETStation (nCanale, i+1).m_bAbsoluteEncoder = bEAE;
+					pHWConfigFile->GetSSCNETStation (nCanale, i).m_bAbsoluteEncoder = bEAE;
 					break;
 				}
 				else   {
 					strHP.Format ("HomePosition_Station%d", i+1);
 					if (str == strHP)   {
 						double fpHP = atof (strText);
-						pHWConfigFile->GetSSCNETStation (nCanale, i+1).m_fpHomePosition = fpHP;
+						pHWConfigFile->GetSSCNETStation (nCanale, i).m_fpHomePosition = fpHP;
 						break;
 					}
 					else   {
@@ -3956,9 +3983,8 @@ int CProject::ImportHWEthercatSlaveAnalogue (ElementXmlPtr pEl, stHWEthSlave& HW
 /*
 ** SaveHWImportedFile :
 */
-int CProject::SaveHWImportedFile (CAdamoHWConfigFile *pHWConfigFile, CString strProjectDir, CString strName)
+int CProject::SaveHWImportedFile (CAdamoHWConfigFile *pHWConfigFile)
 {
-	CString strPath = strProjectDir + "\\" + HWCONFIG_FILE;
 	if (((CFile*) pHWConfigFile)->Open (GetHWConfigPathName(), CFile::typeBinary|CFile::modeCreate|CFile::modeWrite))   {
 		pHWConfigFile->WriteData ();
 		((CFile*) pHWConfigFile)->Close ();

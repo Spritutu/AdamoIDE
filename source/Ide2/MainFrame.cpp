@@ -3013,10 +3013,12 @@ void CMainFrame::OnFileImport()
 	/* ora backuppiamo tutti i file */
 	CProject *pPrj = GETWS ()->GetActiveProject ();
 	if (pPrj)   {
-		pPrj->ImportFromXml (pPrj->GetProjectDir (), pPrj->GetIntermediateDir (), pPrj->GetName ());
+        BeginWaitCursor();
+        pPrj->ImportFromXml (pPrj->GetProjectDir (), pPrj->GetIntermediateDir (), pPrj->GetName ());
 		/* apriamo la pagina di configurazione */
 		OnOpenConfig ();
-	}
+        EndWaitCursor();
+    }
 }
 
 void CMainFrame::OnFileImportXml()
@@ -5674,11 +5676,13 @@ void CMainFrame::SetLanguage (CString strLanguage)
 */
 LRESULT CMainFrame::OnChangeLanguage(WPARAM wParam, LPARAM lParam)
 {
-    CString strThiraResources;
+    CString strCurLanguage;
 
-	CString strThiraLanguage = GETOPT()->GetLanguageThira ();
+	/* ricarichiamo i dati */
+	GETOPT()->LoadOptions (theApp.GetModuleDir ());
+	strCurLanguage = GETOPT()->GetCurLanguage ();
     /* settiamo la nuova dll di risorse del programma */
-    SetLanguage (strThiraResources);
+    SetLanguage (strCurLanguage);
     /* cambiamo al volo i menu */
     SwitchMenu ();
     /* segnaliamo al workspace che e' cambiata la lingua */

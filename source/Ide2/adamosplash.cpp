@@ -29,7 +29,7 @@ CAdamoSplash::CAdamoSplash(CWnd* pParent /*=NULL*/)
 void CAdamoSplash::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
-	DDX_Control(pDX, IDC_ST_SPASH_VERSION, m_ctlVersion);
+	DDX_Control(pDX, IDC_ST_SPLASH_VERSION, m_ctlVersion);
 	//{{AFX_DATA_MAP(CAdamoSplash)
 	//}}AFX_DATA_MAP
 }
@@ -54,11 +54,14 @@ BOOL CAdamoSplash::OnInitDialog()
 	bmp.LoadBitmapA (IDB_THYRASPLASH);
 	bmp.GetBitmap(&b);
 	double fpRatio = (double) b.bmWidth / (double) b.bmHeight;
-	m_fpSizeX = DIMENSIONE_SPLASH * fpRatio;
-	m_fpSizeY = DIMENSIONE_SPLASH;
-	((CMainFrame*)AfxGetMainWnd())->ResizeBitmap(bmp, bmpResized, (int) m_fpSizeX, (int) m_fpSizeY);
+	//m_fpSizeX = DIMENSIONE_SPLASH * fpRatio;
+	//m_fpSizeY = DIMENSIONE_SPLASH;
+	m_fpSizeX = b.bmWidth;
+	m_fpSizeY = b.bmHeight;
+	//((CMainFrame*)AfxGetMainWnd())->ResizeBitmap(bmp, bmpResized, (int) m_fpSizeX, (int) m_fpSizeY);
 	/* carichiamo il bitmap */
-	m_bkg.CreatePatternBrush (&bmpResized);
+	//m_bkg.CreatePatternBrush (&bmpResized);
+	m_bkg.CreatePatternBrush(&bmp);
 	/* ridimensioniamo la dialog */
 	m_bInitialized = true;
 	SetWindowPos (NULL, 0, 0, (int) m_fpSizeX, (int) m_fpSizeY, SWP_NOMOVE);
@@ -89,7 +92,7 @@ void CAdamoSplash::OnSize(UINT nType, int cx, int cy)
 {
 	CDialog::OnSize(nType, cx, cy);
 	if (m_bInitialized)
-		m_ctlVersion.MoveWindow (40, (cy - 50), 300, 25);
+		m_ctlVersion.MoveWindow (26, (cy - 150), 300, 25);
 }
 
 /*
@@ -101,9 +104,10 @@ void CAdamoSplash::InitVersionLabel ()
 	VERSION v;
 
 	m_ctlVersion.SetTransparent(true);
-	m_ctlVersion.SetTextColor (RGB(0, 96, 160));
+	//m_ctlVersion.SetTextColor (RGB(0, 96, 160));
+	m_ctlVersion.SetTextColor (RGB(255, 255, 255));
 	m_ctlVersion.SetFontName("Segoe UI");
-	m_ctlVersion.SetFontSize(15);
+	m_ctlVersion.SetFontSize(10);
 	m_ctlVersion.SetFontBold(true);
 	m_ctlVersion.SetFontItalic(false);
 	CPath strPath = GETOPT()->GetPathBin();

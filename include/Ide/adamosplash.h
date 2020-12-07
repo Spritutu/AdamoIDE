@@ -6,7 +6,7 @@
 #endif // _MSC_VER > 1000
 // AdamoSplash.h : header file
 //
-#define DIMENSIONE_SPLASH 750
+#define DIMENSIONE_SPLASH 400
 
 /////////////////////////////////////////////////////////////////////////////
 // CAdamoSplash dialog

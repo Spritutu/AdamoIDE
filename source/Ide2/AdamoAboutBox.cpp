@@ -70,7 +70,7 @@ BOOL CAdamoAboutBox::OnInitDialog()
 	/* centriamo la finestra */
 	CenterWindow ();
     /* creiamo il font con cui visualizziamo le informazioni */
-    m_fnt=((CMainFrame*) AfxGetMainWnd ())->CreateFont ("Segoe UI", 18, FW_BOLD);
+    m_fnt=((CMainFrame*) AfxGetMainWnd ())->CreateFont ("Segoe UI", 14, FW_BOLD);
 	m_fntBig = ((CMainFrame*)AfxGetMainWnd())->CreateFont("Segoe UI", 24, FW_BOLD);
 	m_stProductID.SetFont (m_fnt);
     m_stProductVersion.SetFont (m_fnt);

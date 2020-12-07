@@ -198,9 +198,9 @@ void CAdamoEthercatIO::OnSize(UINT nType, int cx, int cy)
 	// TODO: Add your message handler code here
     if (m_bInitialized)   {
         m_stInpDig.MoveWindow (10, 2, 100, 16);
-	    m_GridInpDig.MoveWindow (10, 18, cx-20, 13*19+5);
-        m_stOutDig.MoveWindow (10, 272, 100, 16);
-	    m_GridOutDig.MoveWindow (10, 288, cx-20, 13*19+5);
+	    m_GridInpDig.MoveWindow (10, 18, cx-20, 13*22+4);
+        m_stOutDig.MoveWindow (10, 334, 100, 16);
+	    m_GridOutDig.MoveWindow (10, 350, cx-20, 13*22+4);
         m_GridInpDig.SetColumnWidth (0, 50);
         m_GridOutDig.SetColumnWidth (0, 50);
 		m_GridInpDig.SetColumnWidth (1, 100);

@@ -65,6 +65,10 @@ private :
     void SetConfigDoc ();
     void CreateTab ();
     void CreateFont ();
+	void OnOK() {
+	}
+	void OnCancel() {
+	}
 private :
     CConfigDoc     *m_pConfigDoc;
     int             m_nKinemaAddress;

@@ -297,7 +297,7 @@ void CAdamoMachine::ClearDebugData ()
 
 int CAdamoMachine::IsCncRunning ()
 {
-    long nCncRunning;
+    long nCncRunning = 0;
     if (m_ptrCnc)
         nCncRunning=m_ptrCnc->GetIsCncRunning ();
     return nCncRunning;
@@ -305,7 +305,7 @@ int CAdamoMachine::IsCncRunning ()
 
 int CAdamoMachine::IsCncRunningReq ()
 {
-    long nCncRunning;
+    long nCncRunning = 0;
     if (m_ptrCnc)
         if (m_ptrCnc->GetAdamoStatus (&nCncRunning) == S_FALSE)
             nCncRunning = 0;
@@ -314,7 +314,7 @@ int CAdamoMachine::IsCncRunningReq ()
 
 int CAdamoMachine::IsCncOnline ()
 {
-    short snCncOnline=-1;
+    short snCncOnline = 0;
     if (m_ptrCnc)
         snCncOnline=(short)m_ptrCnc->GetIsCncOnline ();
     return snCncOnline;

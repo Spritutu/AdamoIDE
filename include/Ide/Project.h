@@ -77,8 +77,8 @@ public:
 	BOOL SaveConfig();
 	BOOL Save(CArchive& ar);
 	BOOL Load(CString strPathName, int nModule);
-	BOOL LoadConfigData(CString strPathName, CString strParamsPathName);
-	BOOL LoadProjectData(CArchive& ar);
+	bool LoadConfigData(CString strPathName, CString strParamsPathName);
+	bool LoadProjectData(CArchive& ar);
 	void RemoveProjectFiles();
 	CProjectFile* AddFile(CString strPathName);
 	void AddFile(CProjectFile* pPF);
@@ -350,7 +350,7 @@ private :
 	int  ImportHWEthercatAxisData (ElementXmlPtr pElChild, stHWEthAxData& HWEthAxData);
 	int  ImportHWEthercatSlave (ElementXmlPtr pEl, stHWEthSlave& HWEthSlaveData);
 	int  ImportHWEthercatSlaveAnalogue (ElementXmlPtr pEl, stHWEthSlave& HWEthSlaveData, int nAnalogue);
-	int  SaveHWImportedFile (CAdamoHWConfigFile *pHWConfigFile, CString strProjectDir, CString strName);
+	int  SaveHWImportedFile (CAdamoHWConfigFile *pHWConfigFile);
 };
 
 #endif // !defined(AFX_PROJECT_H__07580CB8_BA8B_47B6_9813_78E51B8C971C__INCLUDED_)

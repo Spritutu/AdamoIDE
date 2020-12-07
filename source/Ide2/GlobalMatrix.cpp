@@ -341,6 +341,7 @@ int CMatrixListener::ParseMatrixString (char* szBuffer, int i)
 		    lexxer.vParseCharacter();
     }
     catch(cooLexxerException& e)   {
+        UNREFERENCED_PARAMETER(e);
         nB=-1;
     }
     return nB;
