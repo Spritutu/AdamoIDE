@@ -170,6 +170,16 @@ int CAdamoMachine::DownLoadPC (CString strCC, CString strName)
     return 0;
 }
 
+int CAdamoMachine::DownLoadRS ()
+{
+    if (m_ptrCnc) {
+        InitCmd();
+        m_ptrCnc->DownLoadRS ();
+        EndCmd();
+    }
+    return 0;
+}
+
 int CAdamoMachine::UpLoadPC (CString strCC, CString strArea)
 {
     _bstr_t bstrCC = strCC;

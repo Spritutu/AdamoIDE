@@ -28,6 +28,7 @@ typedef MSXML2::IXMLDOMNamedNodeMapPtr	NodeMapPtr;
 #include "CSyntaxContainer.h"
 #include "CFunctionsContainer.h"
 #include "CObjectsContainer.h"
+#include "CDefinesContainer.h"
 #include "AdamoMachine.h"
 #include "AdamoTraduzione.h"
 #include "RegAdamoHtml.h"
@@ -101,6 +102,7 @@ public:
     void ClearBrowserInfo (const char* szModule);
 	void ClearFunctionsInfo (const char* szModule);
 	void ClearObjectsInfo (const char* szModule);
+	void ClearDefinesInfo(const char* szModule);
 	void SetPathName(CString strPathName) { m_strPathName=strPathName; }
     void SetIsModified(bool bIsModified) {   m_bIsModified = bIsModified;   }
 	CString GetProjectDir();
@@ -240,6 +242,7 @@ public:
 	void	ClearSlaveArray ();
 	void    SaveGlobalVariables ();
 	void	SaveBrowserInfo ();
+	void    SaveDefinesInfo ();
     int     ReconnectMachine (eTypeConnection eTC);
     void	SetHWConfigModified ()      { m_bConfigHWModified=true; }
     void	ResetHWConfigModified ()    { m_bConfigHWModified=false; }
@@ -259,6 +262,7 @@ public:
 	void	AddLibrary ();
 	CStringList& GetLibraries ()		{ return m_listLibraries; }
 	void GetProjectFiles (CStringList& listProjectFiles);
+	CString CleanEditWord (CString strModule, CString str, int nLine);
 protected:
     bool m_bIsModified;
     bool m_bConfigHWModified;
@@ -278,6 +282,7 @@ protected:
 	CSyntaxContainer m_sc;
 	CFunctionsContainer m_fc;
 	CObjectsContainer m_oc;
+	CDefinesContainer m_dc;
     CTraduzioni m_tr;
     CAdamoMachine* m_objMachine;
     CAdamoMachineSettings  m_fSettings;
@@ -351,6 +356,7 @@ private :
 	int  ImportHWEthercatSlave (ElementXmlPtr pEl, stHWEthSlave& HWEthSlaveData);
 	int  ImportHWEthercatSlaveAnalogue (ElementXmlPtr pEl, stHWEthSlave& HWEthSlaveData, int nAnalogue);
 	int  SaveHWImportedFile (CAdamoHWConfigFile *pHWConfigFile);
+	CString LookForADefine(CString strModule, CString str, int nLine);
 };
 
 #endif // !defined(AFX_PROJECT_H__07580CB8_BA8B_47B6_9813_78E51B8C971C__INCLUDED_)

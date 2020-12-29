@@ -310,6 +310,7 @@
     <ClCompile Include="CanOpenData.cpp" />
     <ClCompile Include="CanOpenDigitalIO.cpp" />
     <ClCompile Include="CBrowserContainer.cpp" />
+    <ClCompile Include="CDefinesContainer.cpp" />
     <ClCompile Include="CFunctionsContainer.cpp" />
     <ClCompile Include="CharCheck.cpp" />
     <ClCompile Include="CiLabelX.cpp" />
@@ -555,6 +556,7 @@
     <ClInclude Include="..\..\include\Ide\canopendata.h" />
     <ClInclude Include="..\..\include\Ide\canopendigitalio.h" />
     <ClInclude Include="..\..\include\Ide\CBrowserContainer.h" />
+    <ClInclude Include="..\..\include\Ide\CDefinesContainer.h" />
     <ClInclude Include="..\..\include\Ide\CharCheck.h" />
     <ClInclude Include="..\..\include\Ide\CiLabelX.h" />
     <ClInclude Include="..\..\include\Ide\CiLedRectangleX.h" />

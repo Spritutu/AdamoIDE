@@ -235,11 +235,11 @@ int CAdamoOptions::LoadData (DocXmlPtr pDocXml)
 								m_strCurLanguage = (LPCTSTR)pRootChild->Getitem(n)->text;
 							}
 							else
-							if (str=="Thira")   {
+							if (str=="ThiraLanguage")   {
 								m_strLanguageThira = (LPCTSTR)pRootChild->Getitem(n)->text;
 							}
 							else
-							if (str=="CNCLink")   {
+							if (str=="CNCLinkLanguage")   {
 								m_strLanguageCNCLink = (LPCTSTR)pRootChild->Getitem(n)->text;
 							}
 							else

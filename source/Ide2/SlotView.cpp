@@ -440,6 +440,9 @@ void CSlotView::GetStatusData (stTaskData* pTaskData, int* nIndex, char* strStat
 								case EVENTO_ATTENDI_SEMAPHORE_RT :
 									strcpy (strEvent, LOADSTRING (IDS_ADAMOSLOTVIEW_59));
 									break;
+                                case EVENTO_WAIT_RAMSTORAGEHANDLE:
+                                    strcpy(strEvent, LOADSTRING(IDS_ADAMOSLOTVIEW_60));
+                                    break;
                             }
                         }
                         else   {

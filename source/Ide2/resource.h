@@ -2292,6 +2292,7 @@
 #define IDS_EC_UNSELECT_ALL             1418
 #define IDC_RADIO_BAUDRATE125           1419
 #define IDB_BMP_SELSYMBOLS              1419
+#define IDS_ADAMOSLOTVIEW_60            1419
 #define IDC_RADIO_BAUDRATE250           1420
 #define IDC_RADIO_BAUDRATE500           1421
 #define IDC_RADIO_BAUDRATE1000          1422
@@ -2364,7 +2365,6 @@
 #define IDC_BTN_EC_READ_READ            1484
 #define IDC_BTN_EC_READ_WRITE           1485
 #define IDC_TAB_ENABLE                  1488
-#define IDC_TAB_ENABLE2                 1489
 #define IDC_EC_VAR_ENABLE               1490
 #define IDC_EC_TAB_TYPE                 1491
 #define IDC_EC_TAB_ASSI                 1492

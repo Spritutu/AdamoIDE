@@ -60,6 +60,7 @@ public:
 	void BrowseError (int nError, int nProgLine);
 	int  InBrowseError ()		{ return m_nBroseError; }
 	void ResetBrowseError ()	{ m_nBroseError = 0; m_strCurrentFunction = ""; }
+	CString CleanEditWord(CString str);
 protected:
 	CString m_strPathName, m_strRelPathName, m_strCurrentFunction;
 	CMap<int, int, BOOL, BOOL> m_breakPoints;

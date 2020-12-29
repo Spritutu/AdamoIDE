@@ -15,6 +15,7 @@
 #include "CVariableContainer.h"
 #include "CBrowserContainer.h"
 #include "CSyntaxContainer.h"
+#include "CDefinesContainer.h"
 #include "AdamoFileDati.h"
 #include "AdamoTraduzione.h"
 #include "stackx.h"
@@ -169,6 +170,7 @@ class CPreProcessorListener : public cooLexxerListener  {
         void SetVariableContainer (CVariableContainer* glbArray)   { m_glbArray=glbArray; }
         void SetBrowserContainer  (CBrowserContainer*  symArray)   { m_symArray=symArray; }
         void SetSyntaxContainer  (CSyntaxContainer*  synArray)     { m_synArray=synArray; }
+        void SetDefineContainer(CDefinesContainer* defArray)       { m_defArray = defArray; }
         void SetPathDest (const char* szPathDest)                  { m_strPathDest=szPathDest; }
         void SetTraduzioniObj (CTraduzioni* pTr)                   { m_tr=pTr; }
         void SetDefineTokenMap (CMapStringToString* deftok)        { m_deftok=deftok; }
@@ -197,6 +199,7 @@ class CPreProcessorListener : public cooLexxerListener  {
         CVariableContainer* m_glbArray;
         CBrowserContainer*  m_symArray;
 		CSyntaxContainer*   m_synArray;
+        CDefinesContainer*  m_defArray;
         CString m_strPathDest;
         CTraduzioni* m_tr;
         CMapStringToString* m_deftok;
@@ -292,6 +295,7 @@ class CPreProcessor
         void SetVariableContainer (CVariableContainer* glbArray)   { pl.SetVariableContainer (glbArray); }
         void SetBrowserContainer  (CBrowserContainer*  symArray)   { pl.SetBrowserContainer (symArray); }
 		void SetSyntaxContainer (CSyntaxContainer* synArray)	   { pl.SetSyntaxContainer (synArray); }
+        void SetDefineContainer(CDefinesContainer* defArray)       { pl.SetDefineContainer(defArray); }
         void SetAdamoMachine (CAdamoMachine* objMachine)   { m_objMachine=(CAdamoCfgMachine*)objMachine, pl.SetAdamoMachine (objMachine); }
         void SetTraduzioniObj (CTraduzioni* pTr)   { pl.SetTraduzioniObj (pTr); }
 		void SetIntermediateDir (CString strPathIntermediate)		{ m_strPathIntermediate = strPathIntermediate; }
@@ -299,7 +303,9 @@ class CPreProcessor
         CString GetOutputString ();
 		void AbortCompilation ()									{ m_bAbortCompilation = true; }
 		bool IsCompilationAborted ()								{ return m_bAbortCompilation; }
-    private :
+        CMapStringToString& GetDefinesTokens()                      { return m_deftok; }
+        CMapStringToString& GetGlobalDefinesTokens()                { return m_defglbtok; }
+private :
         CString m_strPathSource;
         CString m_strPathDest;
 		CString m_strPathIntermediate;

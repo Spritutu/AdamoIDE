@@ -149,7 +149,7 @@ class CAdamoListHardwareErrors : public CView
 		CAdamoListHardwareErrors ();
 		virtual ~CAdamoListHardwareErrors ();
 		void AddMessage (CString str, CString strModule, int nPriority, DATE dt);
-		void AddError (stThiraErrore *ae);
+		void AddError (stThiraErrore *ae, bool bOpenDatiFile = true);
 		CListViewErrorsCustomColor& GetListCtrl()	{ return m_list; }
 		void DeleteErrors ();
 	private :

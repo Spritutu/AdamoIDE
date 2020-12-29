@@ -83,7 +83,16 @@ void CObjectsLibrary::AddObject (CAdamoObj* pObject)
 */
 void CObjectsContainer::AddObjectsLibrary (CObjectsLibrary* pObjectsLibrary)
 {
-    m_listObjectLibraries.push_back(pObjectsLibrary);
+	list<CObjectsLibrary*>::iterator i;
+	if (m_listObjectLibraries.size()) {
+		i = m_listObjectLibraries.begin();
+		while (i != m_listObjectLibraries.end()) {
+			if ((*i)->GetName () == pObjectsLibrary->GetName ())
+				AfxMessageBox("Attention Plese !! Library already in the collection ...");
+			i++;
+		}
+	}
+	m_listObjectLibraries.push_back(pObjectsLibrary);
 }
 
 /*

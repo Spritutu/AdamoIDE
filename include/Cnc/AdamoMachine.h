@@ -58,6 +58,7 @@ class CAdamoMachine
         int DownLoadUserStrings (CString strStrings);
         int DownLoadCC (CString strCC, CString strName, CString strParams);
         int DownLoadPC (CString strCC, CString strName);
+        int DownLoadRS ();
         int UpLoadPC (CString strCC, CString strName);
         int DownLoadTemporary (CString strTemporary, CString strName);
         int DownLoadResources (CString strResources);

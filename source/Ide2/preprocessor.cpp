@@ -112,7 +112,7 @@ void CPreProcessor::InitPreprocessing (bool bIsMain)
     pl.m_bWriteCode=true, pl.m_nError=0; m_bAbortCompilation = false;
 	pl.m_strCurrentFunction = ""; pl.m_nBrowseLine = -1;
 	pl.m_strCurrentObject = "";	pl.m_strlistVirtualFunction.RemoveAll ();
-    /* se siamo nel file di main */
+    /* se siamo nel file di main +*/
     if (bIsMain)   {
         /* ripuliamo tutti gli elementi */
         m_defglbtok.RemoveAll ();
@@ -1639,6 +1639,14 @@ bool CPreProcessorListener::ManageDefine (stAdamoToken* p)
                 }
             }
             m_deftok->SetAt (strToken, strValue);
+            stDefinesDescriptor dd;
+            dd.m_strName = strToken;
+            dd.m_strModule = m_strPathDest;
+            dd.m_nLineDefine = m_nProgLine;
+            dd.m_nLineUndefine = -1;
+            dd.m_data.nType = LUA_TSTRING;
+            strcpy (dd.m_data.AdamoData.str, strValue);
+            m_defArray->Add(&dd);
             RemoveEl (nIndex, 2+n);
             b=true;
         }
@@ -1662,6 +1670,14 @@ bool CPreProcessorListener::ManageUnDefine (stAdamoToken* p)
         else   {
             strToken=((stAdamoToken*)m_ptrCodeArray[nIndex+1])->strToken;
             m_deftok->RemoveKey (strToken);
+            stDefinesDescriptor dd;
+            dd.m_strName = strToken;
+            dd.m_strModule = m_strPathDest;
+            dd.m_nLineDefine = -1;
+            dd.m_nLineUndefine = m_nProgLine;
+            dd.m_data.nType = LUA_TSTRING;
+            strcpy(dd.m_data.AdamoData.str, "");
+            m_defArray->Add(&dd);
             RemoveEl (nIndex, 2);
             b=true;
         }

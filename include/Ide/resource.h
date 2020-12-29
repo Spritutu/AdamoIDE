@@ -2292,6 +2292,7 @@
 #define IDS_EC_UNSELECT_ALL             1418
 #define IDC_RADIO_BAUDRATE125           1419
 #define IDB_BMP_SELSYMBOLS              1419
+#define IDS_ADAMOSLOTVIEW_60            1419
 #define IDC_RADIO_BAUDRATE250           1420
 #define IDC_RADIO_BAUDRATE500           1421
 #define IDC_RADIO_BAUDRATE1000          1422
@@ -2857,7 +2858,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        1424
+#define _APS_NEXT_RESOURCE_VALUE        1425
 #define _APS_NEXT_COMMAND_VALUE         33221
 #define _APS_NEXT_CONTROL_VALUE         1662
 #define _APS_NEXT_SYMED_VALUE           123

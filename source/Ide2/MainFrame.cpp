@@ -2111,6 +2111,7 @@ void CMainFrame::ShowGlobalData ()
                 if (pMachine)   {
                     int nLevel, nGL, nType, nProg;
                     nLevel = CDebugger::GetDebugger()->GetStackTraceLevel();
+                    strEditWord = CleanEditWord(strEditWord);
                     if (pMachine->ExistSymbol (strEditWord, nLevel, &nGL, &nType, &nProg))
                         /* esiste un simbolo, andiamo avanti */
                         if (nType==LUA_TNUMBER||nType==LUA_TBOOLEAN||nType==LUA_TSTRING||nType==LUA_TNIL)
@@ -2120,7 +2121,6 @@ void CMainFrame::ShowGlobalData ()
                                 ShowGlobalOrLocalTable (strEditWord, nGL, nLevel, nProg);
                             else;
                     else   {
-						/*
                         COleVariant v;
                         nGL=2;
                         if (pMachine->GetExpressionVariable (strEditWord, nLevel, v)==S_OK)    {
@@ -2137,14 +2137,31 @@ void CMainFrame::ShowGlobalData ()
                             }
                             ShowGlobalOrLocalVariable (strEditWord, nType, nGL, nLevel, 0);
                         }
-						*/
-						;
                     }
                 }
             }
             FocusOnEditor ();
         }
     }
+}
+
+/*
+** CleanEditWord :
+*/
+CString CMainFrame::CleanEditWord(CString str)
+{
+    CView* pView = GetActiveView();
+    if (!(pView && pView->IsKindOf(RUNTIME_CLASS(CLuaView))))
+        return str;
+
+    CLuaDoc* pDoc = ((CLuaView*)pView)->GetDocument();
+
+    if (!pDoc->IsInProject())
+        return str;
+
+    CProjectFile* pPF = pDoc->GetProjectFile();
+    int nLine = ((CLuaView*)pView)->GetEditor()->GetCurrentLine();
+    return GetProject()->CleanEditWord(pPF->GetPathName (), str, nLine);
 }
 
 void CMainFrame::ShowMbx ()
@@ -2726,8 +2743,23 @@ void CMainFrame::ClearClipBoard()
     CloseClipboard();
 }
 
-void CMainFrame::AddErrorBar (const char* sz, int nTypeError)
+void CMainFrame::AddErrorBar (const char* szModule, int nID, const char* sz, int nTypeError)
 {
+    stThiraErrore ae;
+
+    time(&ae.dt);
+    ae.m_strModule = CString(szModule);
+    ae.nDeleteError = 0;
+    ae.nErrore = nID;
+    ae.nGSlot = _NO_GSLOT;
+    ae.nTask = _NO_TASK;
+    ae.nTypeDevice = SYSTEM_ERROR;
+    ae.nDevice = NODEVICE;
+    ae.nTypeError = TE_HARDWARE;
+    strcpy(ae.strErrore, sz);
+    ae.szTaskName[0] = '\0';
+    AddHardwareError(&ae, false);
+    m_wndStatusBar.ShowAlarm();
 }
 
 void CMainFrame::AddStringBar (const char* sz)
@@ -3483,12 +3515,13 @@ void CMainFrame::OnDownloadParameters()
 
     if(pPrj)   {
         if (pPrj->GetMachine()->IsCncOnline ())   {
+            CString strParams = pPrj->GetParamsPathName(), strHWParams = pPrj->GetHWConfigPathName(), strUserStrings = pPrj->GetLanguagePathName();
             BeginWaitCursor ();
-            CString strParams=pPrj->GetParamsPathName(), strHWParams=pPrj->GetHWConfigPathName(), strUserStrings=pPrj->GetLanguagePathName();
+            DownLoadModuleParams();  // deve venire prima del download dei parametri perche il ram disk enabled deve venire prima del download dei parametri, attenzione prima di spostare
             pPrj->GetMachine()->DownLoadParams (strParams, strHWParams, strUserStrings);
-			DownLoadModuleParams ();
             DownLoadCC (pPrj);
             DownLoadPC (pPrj);
+            DownloadRS (pPrj);
             EndWaitCursor ();
         }
     }
@@ -4768,6 +4801,15 @@ void CMainFrame::DownLoadPC (CProject* pPrj)
 }
 
 /*
+** DownloadRS : download del ram storage.
+*/
+void CMainFrame::DownloadRS(CProject* pPrj)
+{
+    if (pPrj->GetRamDisk ())
+        pPrj->GetMachine()->DownLoadRS ();
+}
+
+/*
 ** CreateAxesList :
 */
 void CMainFrame::CreateAxesList (CPtrList& rAxesList)
@@ -5680,7 +5722,7 @@ LRESULT CMainFrame::OnChangeLanguage(WPARAM wParam, LPARAM lParam)
 
 	/* ricarichiamo i dati */
 	GETOPT()->LoadOptions (theApp.GetModuleDir ());
-	strCurLanguage = GETOPT()->GetCurLanguage ();
+	strCurLanguage = GETOPT()->GetLanguageThira();
     /* settiamo la nuova dll di risorse del programma */
     SetLanguage (strCurLanguage);
     /* cambiamo al volo i menu */
@@ -7322,13 +7364,13 @@ void CMainFrame::GestioneErrore (stThiraErrore* p)
 	m_wndStatusBar.ShowAlarm ();
 }
 
-void CMainFrame::AddHardwareError (stThiraErrore* p)
+void CMainFrame::AddHardwareError (stThiraErrore* p, bool bOpenDatiFile)
 {
 	CXTPDockingPane *pPane=m_paneManager.FindPane (ID_VIEW_HARDWARE_ERRORS);
 	if (pPane)   {
 		CAdamoListHardwareErrors *pView = (CAdamoListHardwareErrors *) m_wndDockListHardwareErrors.GetView ();
 		if (pView)   {
-			pView->AddError (p);
+			pView->AddError (p, bOpenDatiFile);
 			pPane->Select ();
 		}
 	}

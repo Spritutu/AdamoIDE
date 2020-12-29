@@ -1355,10 +1355,11 @@ void CAdamoListHardwareErrors::AddMessage (CString str, CString strModule, int n
 /*
 ** AddError :
 */
-void CAdamoListHardwareErrors::AddError (stThiraErrore *ae)
+void CAdamoListHardwareErrors::AddError (stThiraErrore *ae, bool bOpenDatiFile)
 {
 	/* aggiungiamo un errore */
-	OpenDatiFile ();
+	if (bOpenDatiFile)
+        OpenDatiFile ();
 	FillError (ae, -1);
 	m_nItem++;
 }
@@ -1386,27 +1387,27 @@ void CAdamoListHardwareErrors::FillError (stThiraErrore* pE, int nItem)
     lvi.cchTextMax=NMAXLENGTHERRORE;
     GetListCtrl().InsertItem (&lvi);
 
-	/* ID */
-    memset (&lvi, 0, sizeof (LVITEM));
-    sprintf (szBuffer, "%d", pE->nErrore);
-    lvi.mask=LVIF_TEXT;
-    lvi.iItem=nItem;
-    lvi.iSubItem=1;
-    lvi.pszText=szBuffer;
-    lvi.cchTextMax=NMAXLENGTHERRORE;
-    GetListCtrl().SetItem (&lvi);
-
 	/* Module */
     memset (&lvi, 0, sizeof (LVITEM));
     lvi.mask=LVIF_TEXT;
     lvi.iItem=nItem;
-    lvi.iSubItem=2;
+    lvi.iSubItem=1;
     lvi.pszText=pE->m_strModule.GetBuffer ();
     lvi.cchTextMax=NMAXLENGTHERRORE;
     GetListCtrl().SetItem (&lvi);
 	pE->m_strModule.ReleaseBuffer ();
 
-	/* task */
+    /* ID */
+    memset(&lvi, 0, sizeof(LVITEM));
+    sprintf(szBuffer, "%d", pE->nErrore);
+    lvi.mask = LVIF_TEXT;
+    lvi.iItem = nItem;
+    lvi.iSubItem = 2;
+    lvi.pszText = szBuffer;
+    lvi.cchTextMax = NMAXLENGTHERRORE;
+    GetListCtrl().SetItem(&lvi);
+    
+    /* task */
 	memset (&lvi, 0, sizeof (LVITEM));
     lvi.mask=LVIF_TEXT;
     lvi.iItem=nItem;

@@ -46,6 +46,7 @@ CProject::CProject() : m_objMachine (NULL), m_bIsModified (false), m_bIsMachineE
 	m_adf (NULL), m_hwcf (NULL), m_nActiveMode (-1), m_nLevel (0)
 {
     m_ppr.SetVariableContainer (&m_vc);
+	m_ppr.SetDefineContainer (&m_dc);
     m_ppr.SetBrowserContainer (&m_bc);
 	m_ppr.SetSyntaxContainer (&m_sc);
 }
@@ -448,6 +449,9 @@ BOOL CProject::Load(CString strPathName, int nModule)
 				/* variabili globali */
 				m_vc.SetProjectDirectory(GetProjectDir());
 				m_vc.Load();
+				/* defines */
+				m_dc.SetProjectDirectory(GetProjectDir());
+				m_dc.Load();
 				/* browser */
 				m_bc.SetProjectDirectory(GetProjectDir());
 				m_bc.Load();
@@ -465,9 +469,6 @@ BOOL CProject::Load(CString strPathName, int nModule)
 				LoadPswLevel();
 				/* ethercat */
 				LoadEthercatXMLFile();
-				/* apriamo la macchina */
-				if (!OpenMachine())
-					ErroreDiConnessione();
 				/* aggiorniamo le docking bars */
 				((CMainFrame*)AfxGetMainWnd())->LoadDockingProject(this);
 				nB = TRUE;
@@ -476,6 +477,11 @@ BOOL CProject::Load(CString strPathName, int nModule)
 				nB = FALSE;
 			ar.Close();
 			fin.Close();
+			/* se tutto ok, apriamo la macchina */
+			if (nB) {
+				if (!OpenMachine())
+					ErroreDiConnessione();
+			}
 		}
         else    {
 		    AfxMessageBox(LOADSTRING (IDS_ADAMOPROJECT_5));
@@ -684,8 +690,7 @@ void CProject::ExportInFileXml(CString strPath)
 //--------------------------------------------------------------------------------------------------
 
 BOOL CProject::PositionBreakPoints()
-{
-	BOOL bModified = FALSE;
+{BOOL bModified = FALSE;
 	int nFiles = m_files.GetSize();
 	for ( int i=0; i<nFiles; ++i )
 	{
@@ -732,6 +737,7 @@ BOOL CProject::BuildIntermediateFiles()
 	/* seconda passata */
 	for (i=1; i<nFiles; ++i )
 		if (m_files[i]->IsModified() && !m_files[i]->InBrowseError ())  {
+			ClearDefinesInfo (m_files[i]->GetPathName());
 			ClearGlobalVariables (m_files[i]->GetPathName ());
             bIsModified=true;
         }
@@ -806,6 +812,7 @@ BOOL CProject::Compile(CProjectFile *pPF)
 {
 	if ( !CheckBeforeBuild() )
 		return FALSE;
+	ClearDefinesInfo(pPF->GetPathName());
 	ClearGlobalVariables (pPF->GetPathName ());
 	ClearBrowserInfo (pPF->GetPathName ());
     m_pCompiledFile=pPF;
@@ -997,6 +1004,11 @@ void CProject::CheckFiles ()
 		m_files[i]->CheckFiles ();
 }
 
+void CProject::SaveDefinesInfo ()
+{
+	m_dc.Save();
+}
+
 void CProject::SaveGlobalVariables ()
 {
     m_vc.Save ();
@@ -1015,6 +1027,11 @@ void CProject::SaveFunctionsInfo ()
 void CProject::SaveObjectsInfo ()
 {
     m_oc.Save ();
+}
+
+void CProject::ClearDefinesInfo (const char* szModule)
+{
+	m_dc.RemoveModule(szModule);
 }
 
 void CProject::ClearGlobalVariables (const char* szModule)
@@ -1193,6 +1210,7 @@ int CProject::CompilaMain ()
     if (m_files.GetSize())   {
         if (!m_files[0]->IsModified() || m_files[0]->InBrowseError ())
             bOnlyPreprocess=true;
+		ClearDefinesInfo(m_files[0]->GetPathName());
 		ClearGlobalVariables (m_files[0]->GetPathName ());
         m_pCompiledFile=m_files[0];
         nB=m_files[0]->Compile (bOnlyPreprocess);
@@ -1663,13 +1681,8 @@ void CProject::CheckHWConfigFile (CPath pPath)
 */
 void CProject::ErroreDiConnessione ()
 {
-	CString strErrore;
-	stThiraErrore* TE = new stThiraErrore;
-
-	/* componiamo la stringa di errore */
-	strErrore.Format ("%s - %s", ((CAdamoCfgMachine*)m_objMachine)->GetAdamoModule()->GetName(), LOADSTRING (IDS_CONNECTION_FAILED));
 	/* aggiorniamo la status bar */
-	((CMainFrame *) AfxGetMainWnd ())->AddErrorBar (strErrore, TE_HARDWARE);
+	((CMainFrame *) AfxGetMainWnd ())->AddErrorBar (((CAdamoCfgMachine*)m_objMachine)->GetAdamoModule()->GetName(), IDS_CONNECTION_FAILED, LOADSTRING(IDS_CONNECTION_FAILED), TE_HARDWARE);
 }
 /*
 ** SaveHWConfigXML :
@@ -3992,3 +4005,71 @@ int CProject::SaveHWImportedFile (CAdamoHWConfigFile *pHWConfigFile)
 	return 0;
 }
 
+
+/*
+** CleanEditWord :
+*/
+CString CProject::CleanEditWord(CString strModule, CString str, int nLine)
+{
+	CString strBuild;
+	int nIndexStart, nIndexStop;
+	bool bExtracted = false, bInError = false;
+
+	for (int i = 0; i < str.GetLength(); i++) {
+		switch (str[i]) {
+		case '[':
+			nIndexStart = i + 1;
+			bExtracted = false;
+			strBuild.AppendChar(str[i]);
+			break;
+		case ']':
+			if (!bExtracted) {
+				nIndexStop = i - 1;
+				if (nIndexStop >= nIndexStart) {
+					CString strExtracted = str.Mid(nIndexStart, nIndexStop - nIndexStart + 1);
+					CString strSubstitute = LookForADefine(strModule, strExtracted, nLine);
+					strBuild.Delete(nIndexStart, nIndexStop - nIndexStart + 1);
+					strBuild.Append(strSubstitute);
+				}
+				else {
+					bInError = true;
+					break;
+				}
+				bExtracted = true;
+			}
+			strBuild.AppendChar(str[i]);
+			break;
+		default:
+			strBuild.AppendChar(str[i]);
+			break;
+		}
+	}
+	return bInError ? str : strBuild;
+}
+
+/*
+** LookForADefine :
+*/
+CString CProject::LookForADefine(CString strModule, CString str, int nLine)
+{
+	while (true) {
+		stDefinesDescriptor* p = m_dc.Get(strModule, str, nLine);
+		if (p == NULL)
+			p = m_dc.Get(m_files[0]->GetPathName(), str, nLine);
+		if (p != NULL) {
+			if (p->m_data.nType == LUA_TSTRING) {
+				char* c;
+				double fp = strtod(p->m_data.AdamoData.str, &c);
+				if (*c == '\0')   {
+					str = p->m_data.AdamoData.str;
+					break;
+				}
+			}
+			else
+				break;
+		}
+		else
+			break;
+	}
+	return str;
+}

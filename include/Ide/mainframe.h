@@ -334,7 +334,7 @@ public:
 	CProgressCtrl *GetCanOpenProgressBar ()		{ return &m_wndProgCtrl; }
 	CProgressCtrl *GetEthercatProgressBar ()	{ return &m_wndEcScanProgress; }
 	CColorStaticST *GetEthercatSlaveName ()		{ return &m_wndEcScanDevice; }
-	void AddErrorBar (const char* sz, int nTypeError);
+	void AddErrorBar (const char* szModule, int nID,  const char* sz, int nTypeError);
 	CString GetPathHelpOnLine ();
 	void LoadDockingProject (CProject* pProject);
 	void UpdateDockingProject (CProject* pProject);
@@ -650,6 +650,7 @@ private :
     void SwitchToolBars ();
     void DownLoadCC (CProject* pPrj);
     void DownLoadPC (CProject* pPrj);
+	void DownloadRS (CProject* pPrj);
 	void DownLoadModuleParams ();
     void OnSearch (CString strFind, CString strFileType, CString strFolder, bool bMatchCase, bool bMatchWords, bool bMatchRegEx);
     static void FileFinderProc(CFileFinder *pFinder, DWORD dwCode, void *pCustomParam);
@@ -688,13 +689,14 @@ private :
 	void LoadIcons();
 	void GestioneErrore (stThiraErrore* p);
 	void GestioneCancellazioneErrore (stThiraErrore* p);
-	void AddHardwareError (stThiraErrore* p);
+	void AddHardwareError (stThiraErrore* p, bool bOpenDatiFile = true);
 	void AddInterpreterError (stThiraErrore* p);
 	void AddCycleError (stThiraErrore* p);
 	void AddISOError (stThiraErrore* p);
 	void AddEvent (stThiraErrore* p);
 	void GestioneStringa (stThiraStringElement* p);
 	void GestioneCancellazioneStringa (stThiraStringElement* p);
+	CString CleanEditWord(CString str);
 public:
 	afx_msg void OnConnectTo();
 	afx_msg void OnConnections();

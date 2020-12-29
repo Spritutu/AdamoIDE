@@ -6724,7 +6724,7 @@ BEGIN
     IDS_ADAMOPROJECT_2      "The file already exist !"
     IDS_ADAMOPROJECT_3      "Il file esiste gia' ma non e' nel progetto, lo sovrascrivo ?"
     IDS_ADAMOPROJECT_4      "Errore Generico !"
-    IDS_ADAMOPROJECT_5      "Imposiibile aprire il file del progetto"
+    IDS_ADAMOPROJECT_5      "Impossibile aprire il file del progetto"
     IDS_ADAMOPROJECT_6      "File di Progetto (*.lpr)|*.lpr|Tutti i files (*.*)|*.*||"
     IDS_ADAMOPROJECT_7      "Impossibile creare il direttorio dei file temporanei\n"
 END
@@ -7811,6 +7811,7 @@ BEGIN
     IDS_ADAMOPROJECT_11     "Impossibile aprire il file delle lingue"
     IDS_EC_SELECT_ALL       "Seleziona Tutto"
     IDS_EC_UNSELECT_ALL     "Deseleziona Tutto"
+    IDS_ADAMOSLOTVIEW_60    "Scrittura memory"
 END
 
 STRINGTABLE

@@ -262,7 +262,7 @@ bool CBrowserContainer::GetDefinitionSymbol(CString strSymbol, CString strFuncti
 	bool bFound = false;
 
 	switch (nSymbolType) {
-		case  BROWSER_TYPE_OBJECT :
+	case  BROWSER_TYPE_OBJECT :
 			/* object */
 			str.Format("%s_%d", strSymbol, BROWSER_TYPE_OBJECT);
 			it = m_mapDefinitions.find(string(str));

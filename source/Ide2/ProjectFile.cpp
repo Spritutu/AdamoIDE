@@ -301,9 +301,10 @@ int CProjectFile::Compile(bool bOnlyPreprocess)
     CProject* pProject = ((CMainFrame*)AfxGetMainWnd())->GetProject();
 	if (!_access (GetPathName(), 00))   {
 		CFile::Rename (GetPathName(), GetPreprocessPathName());
-		if (pProject->GetName ()==GetName())
+		if (pProject->GetName ()==GetName ())
 			bIsMain=true;    
 		nB=pProject->GetPreprocessor().StartPreProcessing (GetPreprocessPathName(), GetPathName(), bIsMain!=0);
+		pProject->SaveDefinesInfo ();
 		pProject->SaveGlobalVariables ();
 		if (!bOnlyPreprocess)   {
 			strOutput=pProject->GetPreprocessor().GetOutputString ();
